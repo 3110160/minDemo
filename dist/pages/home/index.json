@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wxc-button": "../../common/comps/button/index"
+  }
+}

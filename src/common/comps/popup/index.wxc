@@ -1,0 +1,31 @@
+<template>
+    <wiev>popup</wiev>
+</template>
+
+<script>
+    export default {
+        config: {},
+        properties: {
+            text: {
+                type: String,
+                default: '按钮'
+            }
+        },
+        data: {},
+        methods: {
+            cons() {
+                console.log(3430)
+            },
+            myTap() {
+                console.log(33);
+                this.triggerEvent('mytap', {p: 2})
+            }
+        },
+
+
+    }
+</script>
+
+<style>
+
+</style>

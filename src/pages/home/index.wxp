@@ -1,0 +1,71 @@
+<template>
+  <view>
+    <wxc-button
+            class="wwe"
+            text="握手是订单"
+            bindmytap="onMyTap"
+    ></wxc-button>
+  </view>
+
+</template>
+
+<script>
+export default {
+    config: {
+        usingComponents: {
+            'wxc-button':'common/comps/button'
+        }
+    },
+    data:{
+
+    },
+    methods:{
+
+    },
+    onMyTap(e){
+        console.log(e.detail)
+    },
+    onLaunch () {
+
+    },
+    onShow () {
+        let p = this.selectComponent('.wwe');
+        console.log(p);
+        p&&p.cons();
+    },
+}
+</script>
+
+<style>
+.index-hd {
+  padding: 70rpx;
+  text-align: center;
+}
+.index-bd {
+  padding: 20rpx 30rpx;
+  background-color:cadetblue;
+  color: #fff;
+  text-align: center;
+}
+.index-ft {
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+.index-logo {
+  width: 100rpx;
+  height: 100rpx;
+}
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.provider {
+  position: fixed;
+  width: 100%;
+  bottom: 120rpx;
+  color: #a9a9a9;
+  text-align: center;
+}
+</style>

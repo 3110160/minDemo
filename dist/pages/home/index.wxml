@@ -1,0 +1,6 @@
+<view>
+    <!-- wxp template -->
+    <view>
+        <wxc-button class="wwe" text="握手是订单" bindmytap="onMyTap" _pid="{{_pid}}"></wxc-button>
+    </view>
+</view>
