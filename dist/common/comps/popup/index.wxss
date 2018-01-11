@@ -1,5 +1,0 @@
-.btn{
-        width: 80%;
-        background-color: darkred;
-        color: white;
-    }

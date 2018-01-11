@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "wxc-button": "../../common/comps/button/index"
+    "wxc-button": "../../common/comps/button/index",
+    "wxc-mask": "../../common/comps/mask/index"
   }
 }

@@ -5,6 +5,13 @@
             text="握手是订单"
             bindmytap="onMyTap"
     ></wxc-button>
+    <wxc-mask
+            maskStatus="show"
+            contentAlign='cc'
+            locked="true"
+            bindmasktap="hideModal">
+      <wiev>哈哈哈</wiev>
+    </wxc-mask>
   </view>
 
 </template>
@@ -13,7 +20,8 @@
 export default {
     config: {
         usingComponents: {
-            'wxc-button':'common/comps/button'
+            'wxc-button':'common/comps/button',
+            'wxc-mask':'common/comps/mask'
         }
     },
     data:{
@@ -24,6 +32,9 @@ export default {
     },
     onMyTap(e){
         console.log(e.detail)
+    },
+    hideModal(p){
+        console.log(p)
     },
     onLaunch () {
 

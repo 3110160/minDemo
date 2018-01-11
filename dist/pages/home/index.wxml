@@ -2,5 +2,8 @@
     <!-- wxp template -->
     <view>
         <wxc-button class="wwe" text="握手是订单" bindmytap="onMyTap" _pid="{{_pid}}"></wxc-button>
+        <wxc-mask maskStatus="show" contentAlign="cc" locked="true" bindmasktap="hideModal" _pid="{{_pid}}">
+            <wiev>哈哈哈</wiev>
+        </wxc-mask>
     </view>
 </view>

@@ -16,7 +16,7 @@
   },
   "compilers": {
     "babel": {
-      "sourceMaps": "inline",
+      "sourceMaps":"inline",
       "presets": [
         "env"
       ],
