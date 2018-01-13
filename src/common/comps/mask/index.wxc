@@ -141,6 +141,7 @@
         top: 0;
         left: 0;
         z-index: 9999;
+        transition: .2s ease;
         .maskBg {
             width: 100%;
             height: 100%;
@@ -153,6 +154,7 @@
     }
     .hide{
         opacity: 0;
+        transition: .2s ease;
         display: none;
         z-index: -10;
     }

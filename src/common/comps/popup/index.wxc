@@ -1,31 +1,239 @@
 <template>
-    <wiev>popup</wiev>
+    <wxc-mask
+        maskStatus="{{maskStatus}}"
+        locked="{{locked}}"
+    ></wxc-mask>
+    <view
+            class="popup popup_{{contAlign}} popup_{{animationMode+'_'+contAlign}}"
+            bindtap="hide"
+            >
+        <slot></slot>
+    </view>
 </template>
 
 <script>
     export default {
-        config: {},
+        config: {
+            usingComponents: {
+                'wxc-mask':'common/comps/mask'
+            }
+        },
         properties: {
-            text: {
+            locked: {
                 type: String,
-                default: '按钮'
-            }
-        },
-        data: {},
-        methods: {
-            cons() {
-                console.log(3430)
+                value: 'true'
             },
-            myTap() {
-                console.log(33);
-                this.triggerEvent('mytap', {p: 2})
+            contAlign:{
+                type: String,
+                value: 'top' //left || right || bottom || center
             }
         },
-
-
+        data: {
+            maskStatus:'hide',
+            animationMode:'no'
+        },
+        methods:{
+            //todo 隐藏
+            hide(){
+                this.setData({
+                    animationMode:'fadeIn'
+                });
+                setTimeout(()=>{
+                    this.setData({
+                        maskStatus:'hide',
+                        animationMode:'no'
+                    });
+                },260)
+            },
+            //todo 显示
+            show(){
+                this.setData({
+                    maskStatus:'show',
+                    animationMode:'fadeOut'
+                })
+            }
+        },
     }
 </script>
 
-<style>
+<style lang="less">
+    .popup {
+        z-index: 99999;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: none;
+        overflow: hidden;
+    }
+    .popup_top{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .popup_bottom{
+        left: 0;
+        bottom: 0;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .popup_left{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .popup_right{
+        bottom: 0;
+        right: 0;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .popup_center{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup_fadeOut_top{
+        animation: fadeOut_top .3s ease;
+        display: flex;
+    }
+    .popup_fadeIn_top{
+        animation: fadeIn_top .3s ease;
+        display: flex;
+    }
+    @keyframes fadeOut_top
+    {
+        from {
+            transform: translate(-50%, -100%);
+        }
+        to {
+            transform: translate(-50%, -50%);
+        }
+    }
+    @keyframes fadeIn_top
+    {
+        from {
+            transform: translate(-50%, -50%);
+        }
+        to {
+            transform: translate(-50%, -100%);
+        }
+    }
 
+    /*left*/
+    .popup_fadeOut_left{
+        animation: fadeOut_left .3s ease;
+        display: flex;
+    }
+    .popup_fadeIn_left{
+        animation: fadeIn_left .3s ease;
+        display: flex;
+    }
+    @keyframes fadeOut_left
+    {
+        from {
+            transform: translate(-100%, -50%);
+        }
+        to {
+            transform: translate(-50%, -50%);
+        }
+    }
+    @keyframes fadeIn_left
+    {
+        from {
+            transform: translate(-50%, -50%);
+        }
+        to {
+            transform: translate(-100%, -50%);
+        }
+    }
+
+    /*right*/
+    .popup_fadeOut_right{
+        animation: fadeOut_right .3s ease;
+        display: flex;
+    }
+    .popup_fadeIn_right{
+        animation: fadeIn_right .3s ease;
+        display: flex;
+    }
+    /*left*/
+    @keyframes fadeOut_right
+    {
+        from {
+            right: -50%;
+        }
+        to {
+            right: 0;
+        }
+    }
+    @keyframes fadeIn_right
+    {
+        from {
+            right: 0;
+        }
+        to {
+            right: -50%;
+        }
+    }
+    /*bottom*/
+    .popup_fadeOut_bottom{
+        animation: fadeOut_bottom .3s ease;
+        display: flex;
+    }
+    .popup_fadeIn_bottom{
+        animation: fadeIn_bottom .3s ease;
+        display: flex;
+    }
+    @keyframes fadeOut_bottom
+    {
+        from {
+            bottom: -50%;
+        }
+        to {
+            bottom: 0;
+        }
+    }
+    @keyframes fadeIn_bottom
+    {
+        from {
+            bottom: 0;
+        }
+        to {
+            bottom: -50%;
+        }
+    }
+    /*center*/
+    .popup_fadeOut_center{
+        animation: fadeOut_center .3s ease;
+        display: flex;
+    }
+    .popup_fadeIn_center{
+        animation: fadeIn_center .3s ease;
+        display: flex;
+    }
+    @keyframes fadeOut_center
+    {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn_center
+    {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
 </style>

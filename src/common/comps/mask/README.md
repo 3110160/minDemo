@@ -15,5 +15,8 @@
 |`locked`              | 是否点击可以关闭 [String] （true）   |
 |`contentAlign`        | 内容布局 [String] （tl）   |
 
+实例可调用 methods (show,hide)
+组件绑定事件 omMaskTap
+
 #### v1.0.0（2018-1-9）
 
