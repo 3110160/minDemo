@@ -1,5 +1,5 @@
 <template>
-    <view class="icon {{icon}}" style="{{style}}"></view>
+    <view class="icon icon_{{icon}}" style="{{style}}"></view>
 </template>
 
 <script>

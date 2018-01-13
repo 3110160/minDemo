@@ -3,6 +3,7 @@
     "wxc-button": "../../common/comps/button/index",
     "wxc-mask": "../../common/comps/mask/index",
     "wxc-popup": "../../common/comps/popup/index",
-    "wxc-icon": "../../common/comps/icon/index"
+    "wxc-icon": "../../common/comps/icon/index",
+    "wxc-toast": "../../common/comps/toast/index"
   }
 }

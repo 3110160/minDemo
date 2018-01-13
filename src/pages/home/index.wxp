@@ -16,12 +16,12 @@
           <wxc-icon style="color: red"></wxc-icon>
         </view>
       </wxc-popup>
-
+    <wxc-toast class="toast1" icon="smile" text="还好还好还好还好还好还好还好还好" ></wxc-toast>
   </view>
-
 </template>
 
 <script>
+
 export default {
     config: {
         usingComponents: {
@@ -29,6 +29,7 @@ export default {
             'wxc-mask':'common/comps/mask',
             'wxc-popup':'common/comps/popup',
             'wxc-icon':'common/comps/icon',
+            'wxc-toast':'common/comps/toast'
         }
     },
     data:{
@@ -39,8 +40,9 @@ export default {
     },
     onMyTap(){
         let popup1 = this.selectComponent('.popup1');
-        console.log(popup1);
-        popup1&&popup1.show();
+        let toast1 = this.selectComponent('.toast1');
+        //popup1&&popup1.show();
+        toast1&&toast1.show();
     },
     hideModal(p){
         console.log(p)

@@ -1,0 +1,120 @@
+<template>
+    <view class="toast" wx:if="{{show}}">
+        <view class="toastBox">
+            <view wx:if="{{icon || iconImage}}" class="toastIcon">
+                <block wx:if="{{icon && !iconImage}}">
+                    <wxc-icon icon="{{icon}}" style="{{iconStyle}}"></wxc-icon>
+                </block>
+                <image wx:if="{{iconImage}}" class="toastImage" src="{{iconImage}}" mode="widthFix"></image>
+            </view>
+            <text class="toastTitle">
+                <slot wx:if="{{!text}}"></slot>{{text ? text : ''}}
+            </text>
+        </view>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-icon':'common/comps/icon'
+            }
+        },
+        properties: {
+            show: {
+                type: Boolean,
+                value: false
+            },
+            icon: {
+                type: String,
+                value: ''
+            },
+            text: {
+                type: String,
+                value: ''
+            },
+            iconImage: {
+                type: String,
+                value: ''
+            },
+            iconStyle: {
+                type: String,
+                value: ''
+            },
+            duration: {
+                type: [Number],
+                value: 1500
+            }
+        },
+        data: {
+
+        },
+        methods: {
+            show() {
+                let duration = this.data.duration;
+                clearTimeout(this.timer);
+                this.setData({
+                    show: true
+                });
+                if(duration>0&&duration !== Infinity){
+                    this.timer = setTimeout(()=>{
+                        this.hide();
+                    },duration)
+                }
+            },
+            hide() {
+                this.timer = clearTimeout(this.timer);
+                this.setData({
+                    show: false
+                });
+            },
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .toast{
+        z-index: 999;
+        position: fixed;
+        display: flex;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        .toastBox{
+            margin: 0 auto;
+            pointer-events: auto;
+            display: block;
+            min-width: 300rpx;
+            max-width: 426rpx;
+            background-color: rgba(0, 0, 0, .7);
+            padding: 24rpx 30rpx;
+            text-align: center;
+            border-radius: 10rpx;
+            .toastIcon{
+                display: block;
+                width: 68rpx;
+                height: 68rpx;
+                line-height: 68rpx;
+                margin: 0 auto 18rpx auto;
+                .toastImage{
+                    width: 68rpx;
+                    height: 68rpx;
+                }
+            }
+            .toastTitle{
+                color: #fff;
+                font-size: 28rpx;
+                line-height: 40rpx;
+            }
+        }
+    }
+</style>
