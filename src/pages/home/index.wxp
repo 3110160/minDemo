@@ -16,12 +16,15 @@
           <wxc-icon style="color: red"></wxc-icon>
         </view>
       </wxc-popup>
-    <wxc-toast class="toast1" icon="smile" text="还好还好还好还好还好还好还好还好" ></wxc-toast>
+    <wxc-toast class="toast1" iconStyle="color:red" icon="smile" text="还好还好还好还好还好还好还好还好" ></wxc-toast>
   </view>
+  <wxc-loading show="{{loader}}" bgImage="{{bgImage}}"></wxc-loading>
+  <wxc-tab bindonSwitch="onSwitch"></wxc-tab>
+
 </template>
 
 <script>
-
+import {base64Icon} from './data.js'
 export default {
     config: {
         usingComponents: {
@@ -29,11 +32,14 @@ export default {
             'wxc-mask':'common/comps/mask',
             'wxc-popup':'common/comps/popup',
             'wxc-icon':'common/comps/icon',
-            'wxc-toast':'common/comps/toast'
+            'wxc-toast':'common/comps/toast',
+            'wxc-loading':'common/comps/loading',
+            'wxc-tab':'common/comps/tab',
         }
     },
     data:{
-
+        loader:false,
+        bgImage:base64Icon
     },
     methods:{
 
@@ -43,6 +49,9 @@ export default {
         let toast1 = this.selectComponent('.toast1');
         //popup1&&popup1.show();
         toast1&&toast1.show();
+    },
+    onSwitch(e){
+        console.log(e.detail.currentTarget.dataset.key)
     },
     hideModal(p){
         console.log(p)
@@ -58,8 +67,21 @@ export default {
 }
 </script>
 
-<style>
-.index-hd {
+<style lang="less">
+.scroll-view_H{
+  width: 900rpx;
+  .ds{
+    width: 150rpx;
+    text-align: center;
+    display: inline-block;
+    background-color: #ff776d;
+    height: 40px;
+  }
+}
+
+
+
+  .index-hd {
   padding: 70rpx;
   text-align: center;
 }
@@ -90,4 +112,10 @@ export default {
   color: #a9a9a9;
   text-align: center;
 }
+  .bglogo{
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-size: 50px 50px;
+  }
 </style>

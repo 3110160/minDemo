@@ -9,6 +9,8 @@
                 <wxc-icon style="color: red" _pid="{{_pid}}"></wxc-icon>
             </view>
         </wxc-popup>
-        <wxc-toast class="toast1" icon="smile" text="还好还好还好还好还好还好还好还好" _pid="{{_pid}}"></wxc-toast>
+        <wxc-toast class="toast1" iconStyle="color:red" icon="smile" text="还好还好还好还好还好还好还好还好" _pid="{{_pid}}"></wxc-toast>
     </view>
+    <wxc-loading show="{{loader}}" bgImage="{{bgImage}}" _pid="{{_pid}}"></wxc-loading>
+    <wxc-tab bindonSwitch="onSwitch" _pid="{{_pid}}"></wxc-tab>
 </view>

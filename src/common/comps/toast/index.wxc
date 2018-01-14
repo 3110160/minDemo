@@ -1,6 +1,6 @@
 <template>
     <view class="toast" wx:if="{{show}}">
-        <view class="toastBox">
+        <view class="toastBox {{show?'toastBoxShow':'toastBoxHide'}}">
             <view wx:if="{{icon || iconImage}}" class="toastIcon">
                 <block wx:if="{{icon && !iconImage}}">
                     <wxc-icon icon="{{icon}}" style="{{iconStyle}}"></wxc-icon>
@@ -44,7 +44,7 @@
             },
             duration: {
                 type: [Number],
-                value: 1500
+                value: 2000
             }
         },
         data: {
@@ -95,7 +95,8 @@
             display: block;
             min-width: 300rpx;
             max-width: 426rpx;
-            background-color: rgba(0, 0, 0, .7);
+            background-color: #000;
+            opacity: 0.7;
             padding: 24rpx 30rpx;
             text-align: center;
             border-radius: 10rpx;
@@ -115,6 +116,31 @@
                 font-size: 28rpx;
                 line-height: 40rpx;
             }
+        }
+        .toastBoxShow{
+            animation: show .2s ease;
+        }
+        .toastBoxHide{
+            animation: hide .2s ease;
+        }
+
+    }
+    @keyframes show
+    {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: .7;
+        }
+    }
+    @keyframes hide
+    {
+        from {
+            opacity: .7;
+        }
+        to {
+            opacity: 0;
         }
     }
 </style>

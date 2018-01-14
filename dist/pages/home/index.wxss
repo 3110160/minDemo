@@ -1,10 +1,20 @@
+.scroll-view_H {
+  width: 900rpx;
+}
+.scroll-view_H .ds {
+  width: 150rpx;
+  text-align: center;
+  display: inline-block;
+  background-color: #ff776d;
+  height: 40px;
+}
 .index-hd {
   padding: 70rpx;
   text-align: center;
 }
 .index-bd {
   padding: 20rpx 30rpx;
-  background-color:cadetblue;
+  background-color: cadetblue;
   color: #fff;
   text-align: center;
 }
@@ -21,11 +31,16 @@
   color: #888888;
   font-size: 28rpx;
 }
-
 .provider {
   position: fixed;
   width: 100%;
   bottom: 120rpx;
   color: #a9a9a9;
   text-align: center;
+}
+.bglogo {
+  width: 50px;
+  height: 50px;
+  background-position: center center;
+  background-size: 50px 50px;
 }

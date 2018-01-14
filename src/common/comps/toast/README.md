@@ -1,4 +1,4 @@
-# wxc-mask
+# wxc-toast
 
 > 小程序组件 -
 

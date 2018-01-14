@@ -1,0 +1,138 @@
+<template>
+    <view class="tab">
+        <scroll-view
+                scroll-x="{{true}}"
+                class="tabNavbar"
+                scroll-left="{{(move-width*2.1) / 2}}"
+                scroll-with-animation="{{animate}}"
+        >
+            <view class="tabNavbarWrap">
+                <view
+                        class="tabNavbarItem"
+                        wx:for="{{tabs}}"
+                        wx:for-item="tab"
+                        wx:key="index"
+                        style="width: {{width}}rpx; color:{{index === activeKey ? activeTextColor : textColor}}"
+                >
+                    <view
+                            data-key="{{tab.key}}"
+                            bindtap="onSwitch"
+                            data-idx="{{index}}"
+                            style="width:{{width}}rpx">{{tab.label}}</view>
+                </view>
+                <view class="tabLine {{!animate ? '' : 'lineAnimate'}}"
+                      style="left:{{move}}rpx; width: {{width}}rpx; background-color: {{activeLineColor}};">
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+
+        },
+        properties: {
+            defaultIndex: {
+                type: Number,
+                value: 0
+            },
+            animate: {
+                type: Boolean,
+                value: true
+            },
+            tabs:{
+                type:Array,
+                value:[{
+                    key:1,
+                    label:'Tab一'
+                },{
+                    key:2,
+                    label:'Tab二'
+                }]
+            },
+            textColor: {
+                type: String,
+                value: '#666',
+            },
+            activeTextColor: {
+                type: String,
+                value: '#ff720f',
+            },
+            activeLineColor: {
+                type: String,
+                value: '#ff720f',
+            }
+        },
+        data: {
+            move:0,
+            width:150,
+            activeKey:0
+        },
+        methods: {
+            onSwitch(e){
+                let currentIndex = e.currentTarget.dataset.idx,
+                    width = this.data.width;
+                this.setData({
+                    activeKey : currentIndex,
+                    move: width * currentIndex
+                });
+                this.triggerEvent('onSwitch',e)
+            }
+        },
+        attached(){
+
+        },
+        ready(){
+            const minAndMax = (defaultIndex) =>{
+                let {tabs} = this.data;
+                if(defaultIndex>tabs.length-1){
+                    return tabs.length-1;
+                }else if(defaultIndex<0){
+                    return 0;
+                }else return tabs.length-1;
+            };
+            let activeKey = minAndMax(this.data.defaultIndex);
+            let len = this.data.tabs.length;
+            const width = parseInt(750 / (len > 5? 5 : len));
+            this.setData({
+                width : width,
+                move: width * activeKey
+            });
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .tab{
+        background-color: white;
+        border-bottom: 1px solid #eeeeee;
+        border-top: 1px solid #eeeeee;
+        .tabNavbarWrap{
+            position: relative;
+            white-space: nowrap;
+            width: 100%;
+            .tabNavbarItem{
+                text-align: center;
+                display: inline-block;
+                line-height: 40px;
+                font-size: 28rpx;
+                color: #666666;
+            }
+            .tabLine{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                background-color: #ff776d;
+            }
+            .lineAnimate{
+                transition: .2s ease;
+            }
+        }
+
+    }
+</style>

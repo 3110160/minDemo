@@ -1,4 +1,4 @@
-# wxc-mask
+# wxc-icon
 
 > 小程序组件 -
 
