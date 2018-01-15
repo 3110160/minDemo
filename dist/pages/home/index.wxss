@@ -1,13 +1,3 @@
-.scroll-view_H {
-  width: 900rpx;
-}
-.scroll-view_H .ds {
-  width: 150rpx;
-  text-align: center;
-  display: inline-block;
-  background-color: #ff776d;
-  height: 40px;
-}
 .index-hd {
   padding: 70rpx;
   text-align: center;

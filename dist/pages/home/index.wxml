@@ -13,4 +13,8 @@
     </view>
     <wxc-loading show="{{loader}}" bgImage="{{bgImage}}" _pid="{{_pid}}"></wxc-loading>
     <wxc-tab bindonSwitch="onSwitch" _pid="{{_pid}}"></wxc-tab>
+    <wxc-elip line="2" class="sdhs" _pid="{{_pid}}">
+        上的时候说的是卡号多少收到客户可收到收到后收款单号上的上的时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始是多少的开始
+    </wxc-elip>
+    <wxc-loadmore _pid="{{_pid}}"></wxc-loadmore>
 </view>

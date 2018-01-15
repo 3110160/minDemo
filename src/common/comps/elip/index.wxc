@@ -1,0 +1,50 @@
+<template>
+    <view class="elipLine {{line > 1 ? 'elipMultiple' : ''}} {{class}}" style="{{line > 1 ? '-webkit-line-clamp:' + line + ' ;' : ''}}{{style}}">
+        <slot></slot>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+
+        },
+        properties: {
+            line: {
+                type: Number,
+                value: ''
+            },
+            class:{
+                type:String,
+                value:''
+            },
+            style:{
+                type:String,
+                value:''
+            }
+        },
+        data: {
+
+        },
+        methods: {
+
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .elipLine{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .elipMultiple {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+</style>

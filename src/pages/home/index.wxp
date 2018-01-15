@@ -20,7 +20,10 @@
   </view>
   <wxc-loading show="{{loader}}" bgImage="{{bgImage}}"></wxc-loading>
   <wxc-tab bindonSwitch="onSwitch"></wxc-tab>
-
+  <wxc-elip line="2" class="sdhs">
+    上的时候说的是卡号多少收到客户可收到收到后收款单号上的上的时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始是多少的开始
+  </wxc-elip>
+  <wxc-loadMore></wxc-loadMore>
 </template>
 
 <script>
@@ -35,6 +38,8 @@ export default {
             'wxc-toast':'common/comps/toast',
             'wxc-loading':'common/comps/loading',
             'wxc-tab':'common/comps/tab',
+            'wxc-elip':'common/comps/elip',
+            'wxc-loadmore':'common/comps/loadmore',
         }
     },
     data:{
@@ -68,19 +73,6 @@ export default {
 </script>
 
 <style lang="less">
-.scroll-view_H{
-  width: 900rpx;
-  .ds{
-    width: 150rpx;
-    text-align: center;
-    display: inline-block;
-    background-color: #ff776d;
-    height: 40px;
-  }
-}
-
-
-
   .index-hd {
   padding: 70rpx;
   text-align: center;

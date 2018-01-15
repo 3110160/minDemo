@@ -1,0 +1,109 @@
+<template>
+    <view wx:if="{{show}}">
+        <view wx:if="{{isEnd}}" class="loadMore">
+            <view class="endLine"></view>
+
+            <view class="endIcon" style="background-image: url({{endIcon}})"></view>
+            <text class="text" style="margin-right: 16rpx">{{endText}}</text>
+
+            <view class="endLine"></view>
+        </view>
+        <view wx:else class="loadMore">
+            <view class="endIcon loading" style="background-image: url({{loadMoreIcon}})"></view>
+            <text class="text">{{loadMoreText}}</text>
+        </view>
+    </view>
+</template>
+
+<script>
+    import {ENDTYPE,LOADMORE} from './confing'
+    export default {
+        config: {
+
+        },
+        properties: {
+            show:{
+                type:Boolean,
+                value:true
+            },
+            isEnd:{
+                type:Boolean,
+                value:true
+            },
+            endType:{
+                type:String,
+                value:'a'
+            }
+        },
+        data: {
+            endIcon:'',
+            endText:'',
+            loadMoreIcon:'',
+            loadMoreText:'',
+        },
+        methods: {
+
+        },
+        attached(){
+            let type = this.data.endType;
+            switch (type) {
+                case 'a': {
+                    this.setData({endIcon:ENDTYPE.a.url,endText:ENDTYPE.a.text});
+                    break;
+                }
+
+                case 'b': {
+                    this.setData({endIcon:ENDTYPE.b.url,endText:ENDTYPE.b.text});
+                    break;
+                }
+            }
+            this.setData({
+                loadMoreIcon:LOADMORE.a.url,
+                loadMoreText:LOADMORE.a.text,
+            })
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .loadMore{
+        display: flex;
+        width: 100%;
+        height: 92rpx;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .endIcon{
+            width: 32rpx;
+            height: 32rpx;
+            margin-left: 16rpx;
+            background-position: center;
+            background-size: 32rpx 32rpx;
+        }
+        .loading{
+            animation: loadAnimation .6s infinite linear;
+            margin-right: 4rpx;
+        }
+        .text{
+            font-size: 24rpx;
+            color: #666666;
+        }
+        .endLine{
+            width: 100rpx;
+            height: 1rpx;
+            border-top: 1rpx solid #d2d2d2;
+        }
+    }
+
+    @keyframes loadAnimation {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+</style>

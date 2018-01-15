@@ -6,6 +6,8 @@
     "wxc-icon": "../../common/comps/icon/index",
     "wxc-toast": "../../common/comps/toast/index",
     "wxc-loading": "../../common/comps/loading/index",
-    "wxc-tab": "../../common/comps/tab/index"
+    "wxc-tab": "../../common/comps/tab/index",
+    "wxc-elip": "../../common/comps/elip/index",
+    "wxc-loadmore": "../../common/comps/loadmore/index"
   }
 }
