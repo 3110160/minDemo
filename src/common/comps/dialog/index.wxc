@@ -1,0 +1,184 @@
+<template>
+    <wxc-popup contAlign="center" locked="true" class="popup">
+        <view class="dialog">
+            <view class="dialogTitle" wx:if="{{title}}" style="color: {{titleColor}}">{{title}}</view>
+            <view class="dialogContent">
+                <image class="dialogContentImage" wx:if="{{image}}" src="{{image}}" mode="aspectFill"></image>
+                <view class="dialogContentText" wx:if="{{content}}" style="color: {{contentColor}}">{{content}}</view>
+                <slot></slot>
+            </view>
+            <view class="dialogBtns" wx:if="{{horizontal}}">
+                <view class="dialogCancel" wx:if="{{cancelText}}" style="color: {{cancelColor}}" bindtap="cancelCallback">{{cancelText}}</view>
+                <view class="dialogConfirmSecond" wx:if="{{dialogSecondText}}" style="color: {{dialogSecondColor}}" bindtap="dialogSecondCallBack">{{dialogSecondText}}</view>
+                <view class="dialogConfirm" wx:if="{{confirmText}}" style="color: {{confirmColor}}" bindtap="confirmCallback">{{confirmText}}</view>
+            </view>
+            <view class="dialogBtns vertical" wx:if="{{!horizontal}}">
+                <view class="dialogCancel" wx:if="{{cancelText}}" style="color: {{cancelColor}}" bindtap="cancelCallback">{{cancelText}}</view>
+                <view class="dialogConfirmSecond" wx:if="{{dialogSecondText}}" style="color: {{dialogSecondColor}}" bindtap="dialogSecondCallBack">{{dialogSecondText}}</view>
+                <view class="dialogConfirm" wx:if="{{confirmText}}" style="color: {{confirmColor}}" bindtap="confirmCallback">{{confirmText}}</view>
+            </view>
+        </view>
+    </wxc-popup>
+</template>
+
+<script>
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-popup':'common/comps/popup'
+            }
+        },
+        behaviors: [],
+        properties: {
+            title: {
+                type: String
+            },
+            titleColor: {
+                type: String,
+                value: '#000000'
+            },
+            content: {
+                type: String
+            },
+            horizontal: {
+                type: Boolean,
+                value:true
+            },
+            contentColor: {
+                type: String,
+                value: '#888888'
+            },
+            confirmText: {
+                type: String
+            },
+            confirmColor: {
+                type: String,
+                value: '#ff720f'
+            },
+            cancelText: {
+                type: String
+            },
+            cancelColor: {
+                type: String,
+                value: '#666666'
+            },
+            dialogSecondText: {
+                type: String
+            },
+            dialogSecondColor: {
+                type: String,
+                value: '#666666'
+            },
+            image: {
+                type: String
+            }
+        },
+        data: {},
+        methods: {
+            show() {
+                let popupComponent = this.selectComponent('.popup');
+                popupComponent && popupComponent.show();
+            },
+            hide() {
+                let popupComponent = this.selectComponent('.popup');
+                popupComponent && popupComponent.hide();
+            },
+
+            cancelCallback () {
+                this.triggerEvent('cancel')
+            },
+            confirmCallback () {
+                this.triggerEvent('confirm')
+            },
+            dialogSecondCallBack () {
+                this.triggerEvent('SecondConfirm')
+            }
+        }
+    }
+
+
+</script>
+
+<style lang="less">
+     .dialog {
+        background: #ffffff;
+        width: 560rpx;
+        border-radius: 8rpx;
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding-top: 10px;
+
+        .dialogTitle {
+            font-size: 36rpx;
+            margin-bottom: 18px;
+            padding: 0 36rpx;
+        }
+
+         .dialogContent{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            .dialogContentImage{
+                width: 488rpx;
+                height: 330px;
+                background-color: #ebebeb;
+                margin: 6rpx 36rpx 18rpx;
+            }
+
+           .dialogContentText {
+                font-size: 30rpx;
+                padding: 0 36rpx 30rpx;
+                text-align: center;
+            }
+        }
+
+        .dialogBtns {
+            width: 100%;
+            line-height: 100rpx;
+            min-height: 100rpx;
+            border-top: 1px solid #e5e5e5;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 36rpx;
+            .dialogCancel {
+                flex: 1;
+                border-right: 1px solid #e5e5e5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .dialogConfirm {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .dialogConfirmSecond {
+                border-right: 1px solid #e5e5e5;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+         .vertical{
+             flex-direction: column;
+             font-size: 36rpx;
+             .dialogCancel{
+                 border-bottom: 1px solid #e5e5e5;
+                 border-right: none;
+                 width: 100%;
+             }
+             .dialogConfirmSecond{
+                 border-bottom: 1px solid #e5e5e5;
+                 border-right: none;
+                 width: 100%;
+             }
+         }
+    }
+</style>

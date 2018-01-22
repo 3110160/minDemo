@@ -17,4 +17,5 @@
         上的时候说的是卡号多少收到客户可收到收到后收款单号上的上的时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始是多少的开始
     </wxc-elip>
     <wxc-loadmore _pid="{{_pid}}"></wxc-loadmore>
+    <wxc-dialog class="dialog" title="标题" horizontal="{{false}}" content="我是内容我是内容我是内容我是内容" confirmText="确定" cancelText="取消" _pid="{{_pid}}"></wxc-dialog>
 </view>

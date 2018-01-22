@@ -24,6 +24,14 @@
     上的时候说的是卡号多少收到客户可收到收到后收款单号上的上的时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始是多少的开始
   </wxc-elip>
   <wxc-loadMore></wxc-loadMore>
+  <wxc-dialog
+          class="dialog"
+          title="标题"
+          horizontal="{{false}}"
+          content="我是内容我是内容我是内容我是内容"
+          confirmText="确定"
+          cancelText="取消"
+  ></wxc-dialog>
 </template>
 
 <script>
@@ -40,6 +48,7 @@ export default {
             'wxc-tab':'common/comps/tab',
             'wxc-elip':'common/comps/elip',
             'wxc-loadmore':'common/comps/loadmore',
+            'wxc-dialog':'common/comps/dialog',
         }
     },
     data:{
@@ -51,9 +60,11 @@ export default {
     },
     onMyTap(){
         let popup1 = this.selectComponent('.popup1');
+        let dialog = this.selectComponent('.dialog');
         let toast1 = this.selectComponent('.toast1');
         //popup1&&popup1.show();
-        toast1&&toast1.show();
+        dialog&&dialog.show();
+        //toast1&&toast1.show();
     },
     onSwitch(e){
         console.log(e.detail.currentTarget.dataset.key)

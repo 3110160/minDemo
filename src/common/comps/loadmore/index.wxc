@@ -3,8 +3,8 @@
         <view wx:if="{{isEnd}}" class="loadMore">
             <view class="endLine"></view>
 
-            <view class="endIcon" style="background-image: url({{endIcon}})"></view>
-            <text class="text" style="margin-right: 16rpx">{{endText}}</text>
+            <view wx:if="{{endIcon!=''}}" class="endIcon" style="background-image: url({{endIcon}})"></view>
+            <text class="text" style="margin:0 16rpx 0 {{endIcon!=''?'4rpx':'16rpx'}}">{{endText}}</text>
 
             <view class="endLine"></view>
         </view>
@@ -47,6 +47,10 @@
         attached(){
             let type = this.data.endType;
             switch (type) {
+                case '': {
+                    this.setData({endIcon:'',endText:'宝宝是有底线的~'});
+                    break;
+                }
                 case 'a': {
                     this.setData({endIcon:ENDTYPE.a.url,endText:ENDTYPE.a.text});
                     break;

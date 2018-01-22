@@ -67,7 +67,7 @@
         },
         data: {
             move:0,
-            width:150,
+            width:'',
             activeKey:0
         },
         methods: {
@@ -91,7 +91,7 @@
                     return tabs.length-1;
                 }else if(defaultIndex<0){
                     return 0;
-                }else return tabs.length-1;
+                }else return defaultIndex;
             };
             let activeKey = minAndMax(this.data.defaultIndex);
             let len = this.data.tabs.length;
