@@ -13,14 +13,11 @@
 |`titleColor`                 | 标题颜色[String]  |
 |`content`                 | 标题颜色[String] 或者 直接 插入dom |
 |`contentColor`                 | 内容颜色[String]  |
-|`dialogSecondText`                 | 内容文案[String]  |
-|`dialogSecondColor`                 | 第二个内容颜色[String]  |
 |`confirmText`                 | 确定的文案[String]  |
 |`confirmColor`                 | 确定的文案颜色[String]  |
 |`cancelText`                 | 取消的文案[String]  |
 |`cancelColor`                 | 取消的文案颜色[String]  |
 |`image`                 | 如果要插入img [String] /htts: or basr64 |
-|`horizontal`                 | 按钮是否水平排布 [Boolean]  |
 
 
 methods : show() ,hide()
