@@ -18,4 +18,5 @@
     </wxc-elip>
     <wxc-loadmore _pid="{{_pid}}"></wxc-loadmore>
     <wxc-dialog class="dialog" title="标题" horizontal="{{false}}" content="我是内容我是内容我是内容我是内容" confirmText="确定" cancelText="取消" _pid="{{_pid}}"></wxc-dialog>
+    <wxc-switch _pid="{{_pid}}"></wxc-switch>
 </view>

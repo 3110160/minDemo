@@ -32,6 +32,7 @@
           confirmText="确定"
           cancelText="取消"
   ></wxc-dialog>
+  <wxc-switch></wxc-switch>
 </template>
 
 <script>
@@ -49,6 +50,7 @@ export default {
             'wxc-elip':'common/comps/elip',
             'wxc-loadmore':'common/comps/loadmore',
             'wxc-dialog':'common/comps/dialog',
+            'wxc-switch':'common/comps/switch',
         }
     },
     data:{

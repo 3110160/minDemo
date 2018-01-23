@@ -9,6 +9,7 @@
     "wxc-tab": "../../common/comps/tab/index",
     "wxc-elip": "../../common/comps/elip/index",
     "wxc-loadmore": "../../common/comps/loadmore/index",
-    "wxc-dialog": "../../common/comps/dialog/index"
+    "wxc-dialog": "../../common/comps/dialog/index",
+    "wxc-switch": "../../common/comps/switch/index"
   }
 }
