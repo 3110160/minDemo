@@ -1,1 +1,4 @@
-<button class="btn" bindtap="myTap">{{text}}</button>
+<button class="btn {{currentType}} {{currentSize}}" bindtap="myTap" style="background-color: {{bgColor}};width: {{width.indexOf('%')>-1?width:width}}">
+    <span wx:if="loading" class="{{loading?'loading':''}}"></span>
+    {{text}}
+</button>

@@ -1,9 +1,9 @@
 <view>
     <!-- wxp template -->
     <view>
-        <wxc-button class="wwe" text="握手是订单" bindmytap="onMyTap" _pid="{{_pid}}"></wxc-button>
+        <wxc-button type="warn" text="握手是订单" bindmytap="onMyTap" size="small" _pid="{{_pid}}"></wxc-button>
 
-        <wxc-popup class="popup1" contAlign="center" _pid="{{_pid}}">
+        <wxc-popup class="popup1" contAlign="left" _pid="{{_pid}}">
             <view style="background-color: #eeeeee;height: 140px;width:140px">
                 还好还好
                 <wxc-icon style="color: red" _pid="{{_pid}}"></wxc-icon>
@@ -19,4 +19,5 @@
     <wxc-loadmore _pid="{{_pid}}"></wxc-loadmore>
     <wxc-dialog class="dialog" title="标题" horizontal="{{false}}" content="我是内容我是内容我是内容我是内容" confirmText="确定" cancelText="取消" _pid="{{_pid}}"></wxc-dialog>
     <wxc-switch _pid="{{_pid}}"></wxc-switch>
+    <wxc-cell></wxc-cell>
 </view>

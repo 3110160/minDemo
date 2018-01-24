@@ -1,5 +1,8 @@
 <template>
-    <button  class="btn" bindtap="myTap">{{text}}</button>
+    <button class="btn {{currentType}} {{currentSize}}" bindtap="myTap" style="background-color: {{bgColor}};width: {{width.indexOf('%')>-1?width:width}}">
+        <span wx:if="loading" class="{{loading?'loading':''}}"></span>
+        {{text}}
+    </button>
 </template>
 
 <script>
@@ -8,17 +11,71 @@
         properties: {
             text: {
                 type: String,
-                default: '按钮'
+                value: '按钮'
+            },
+            bgColor:{
+                type:String,
+                value:''
+            },
+            loading:{
+              type:Boolean,
+              value:false
+            },
+            width:{
+                type:String,
+                value:''
+            },
+            type:{
+                type:String,
+                value:'default',
+                observer(type){
+                    let currentType =null;
+                    switch (type){
+                        case 'primary':
+                            currentType = 'primary';
+                        break;
+                        case 'warn':
+                            currentType = 'warn';
+                            break;
+                        case 'danger':
+                            currentType = 'danger';
+                            break;
+                        default:
+                            currentType = 'default'
+                    }
+                    this.setData({currentType:currentType})
+                }
+            },
+            size:{
+                type:String,
+                value:'default',
+                observer(type){
+                    let currentSize =null;
+                    switch (type){
+                        case 'small':
+                            currentSize = 'small';
+                            break;
+                        case 'mini':
+                            currentSize = 'mini';
+                            break;
+                        case 'large':
+                            currentSize = 'large';
+                            break;
+                        default:
+                            currentSize = 'default'
+                    }
+                    this.setData({currentSize:currentSize})
+                }
             }
         },
-        data:{},
+        data:{
+            currentType:'',
+            currentSize:''
+        },
         methods:{
-            cons(){
-                console.log(3430)
-            },
-            myTap(){
+            myTap(e){
                 console.log(33);
-                this.triggerEvent('mytap',{p:2})
+                this.triggerEvent('mytap',e)
             }
         },
 
@@ -26,10 +83,93 @@
     }
 </script>
 
-<style>
+<style lang="less">
     .btn{
+        position: relative;
+        color: #333;
+        background-color: #fff;
+        margin-bottom: 10px;
+        border-radius: 4rpx;
+        font-size: 32rpx;
+        line-height: 45px;
+        height: 45px;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-align: center;
+        transition: .1s ease;
         width: 80%;
-        background-color: darkred;
-        color: white;
+    }
+    .primary{
+        border: none;
+        color: #fff;
+        background-color: #4b0;
+    }
+    .warn {
+        color: #fff;
+        background-color: #f85;
+        border: none;
+    }
+    .danger {
+        color: #fff;
+        background-color: #f44;
+        border: none;
+    }
+    .small{
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        font-size: 24rpx;
+        border: none;
+        width: auto;
+    }
+    .mini {
+        display: inline-block;
+        line-height: 22px;
+        height: 22px;
+        font-size: 20rpx;
+        border: none;
+        width: auto;
+    }
+    .large {
+        border: none;
+        line-height: 50px;
+        height: 50px;
+    }
+    .btn:active{
+        opacity: .6;
+    }
+    .btn:disabled{
+        color: #999 !important;
+        background: #f8f8f8 !important;
+        border-color: #e5e5e5 !important;
+        cursor: not-allowed !important;
+        opacity: 1 !important;
+        &:active{
+            opacity: 1;
+        }
+    }
+    .loading {
+    }
+    .loading{
+        color: transparent;
+        opacity: 1;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-left: -8px;
+        border: 3px solid #e5e5e5;
+        border-color: #666 #e5e5e5 #e5e5e5 #e5e5e5;
+        border-radius: 8px;
+        box-sizing: border-box;
+        animation: btn-spin .6s linear;
+        animation-iteration-count: infinite
+    }
+    @keyframes btn-spin {
+        0% {
+            transform: rotate(0)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
     }
 </style>

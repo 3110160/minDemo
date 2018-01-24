@@ -43,7 +43,7 @@
                         maskStatus:'hide',
                         animationMode:'no'
                     });
-                },260)
+                },150)
             },
             //todo 显示
             show(){

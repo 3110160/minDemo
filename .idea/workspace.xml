@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8061682-4f16-4e4e-a63b-48e333cd7262" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/comps/button/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/common/comps/button/index.js" afterPath="$PROJECT_DIR$/dist/common/comps/button/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/common/comps/button/index.wxml" afterPath="$PROJECT_DIR$/dist/common/comps/button/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/common/comps/button/index.wxss" afterPath="$PROJECT_DIR$/dist/common/comps/button/index.wxss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/pages/home/index.js" afterPath="$PROJECT_DIR$/dist/pages/home/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/pages/home/index.json" afterPath="$PROJECT_DIR$/dist/pages/home/index.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/pages/home/index.wxml" afterPath="$PROJECT_DIR$/dist/pages/home/index.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/switch/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/switch/index.wxc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/button/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/button/index.wxc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/popup/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/popup/index.wxc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/home/index.wxp" afterPath="$PROJECT_DIR$/src/pages/home/index.wxp" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,89 +28,30 @@
       <file leaf-file-name="index.wxp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/home/index.wxp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+            <state relative-caret-position="90">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.wxc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/switch/index.wxc">
+        <entry file="file://$PROJECT_DIR$/src/common/comps/button/index.wxc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-659">
-              <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="354">
+              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="40" />
               <folding>
-                <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/dialog/index.wxc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="168" column="19" lean-forward="true" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#view#0;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#0;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#2;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#0;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#2;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/dialog/README.md">
+        <entry file="file://$PROJECT_DIR$/src/common/comps/button/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/popup/index.wxc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/mask/index.wxc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/popup/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/mask/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="332">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -136,13 +81,13 @@
       <find>lineColor</find>
       <find>loadAnimation</find>
       <find>defaultIndex</find>
-      <find>popup1</find>
       <find>min</find>
       <find>confirmCallback</find>
       <find>dialog</find>
       <find>content</find>
       <find>image</find>
       <find>Third</find>
+      <find>popup1</find>
     </findStrings>
     <replaceStrings>
       <replace>maskStatus</replace>
@@ -169,7 +114,6 @@
         <option value="$PROJECT_DIR$/min.config.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/common/comps/mask/README.md" />
-        <option value="$PROJECT_DIR$/src/common/comps/popup/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/mask/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/icon/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/toast/index.wxc" />
@@ -178,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/common/comps/toast/README.md" />
         <option value="$PROJECT_DIR$/src/pages/home/data.js" />
         <option value="$PROJECT_DIR$/src/common/comps/loading/README.md" />
-        <option value="$PROJECT_DIR$/src/common/comps/button/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/tab/README.md" />
         <option value="$PROJECT_DIR$/src/common/comps/elip/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/elip/README.md" />
@@ -188,10 +131,15 @@
         <option value="$PROJECT_DIR$/src/common/comps/popup/README.md" />
         <option value="$PROJECT_DIR$/src/common/comps/loadmore/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/tab/index.wxc" />
-        <option value="$PROJECT_DIR$/src/common/comps/dialog/index.wxc" />
         <option value="$PROJECT_DIR$/src/common/comps/dialog/README.md" />
-        <option value="$PROJECT_DIR$/src/pages/home/index.wxp" />
         <option value="$PROJECT_DIR$/src/common/comps/switch/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/popup/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/dialog/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/form/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/cell/index.wxc" />
+        <option value="$PROJECT_DIR$/src/pages/home/index.wxp" />
+        <option value="$PROJECT_DIR$/src/common/comps/button/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/button/README.md" />
       </list>
     </option>
   </component>
@@ -216,7 +164,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="731" />
@@ -282,22 +230,6 @@
               <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="minDemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="comps" type="462c0819:PsiDirectoryNode" />
-              <item name="dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="minDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="comps" type="462c0819:PsiDirectoryNode" />
-              <item name="switch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="minDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,8 +243,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,11 +277,11 @@
       <recent name="$PROJECT_DIR$/src/common/layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/comps/button" />
       <recent name="$PROJECT_DIR$/src/common/comps" />
       <recent name="$PROJECT_DIR$/src/pages/home" />
       <recent name="$PROJECT_DIR$/src/common/comps/icon" />
       <recent name="$PROJECT_DIR$/src/common/comps/popup" />
-      <recent name="$PROJECT_DIR$/src/common/comps/mask" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +318,10 @@
       <workItem from="1515980867035" duration="14873000" />
       <workItem from="1516151326045" duration="1683000" />
       <workItem from="1516586608556" duration="199000" />
-      <workItem from="1516614346513" duration="9239000" />
+      <workItem from="1516614346513" duration="9286000" />
+      <workItem from="1516705395988" duration="4470000" />
+      <workItem from="1516758917775" duration="61000" />
+      <workItem from="1516794438679" duration="4814000" />
     </task>
     <task id="LOCAL-00001" summary="fdd">
       <created>1515501598136</created>
@@ -444,31 +379,37 @@
       <option name="project" value="LOCAL" />
       <updated>1516624366423</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1.15">
+      <created>1516671405936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1516671405936</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95352000" />
+    <option name="totallyTimeSpent" value="104744000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="731" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="731" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18044515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18044515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2610063" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21732523" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -493,8 +434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/packages/@minui/wxc-example/dist/index.json" />
-    <entry file="file://$PROJECT_DIR$/dist/packages/@minui/wxc-example/dist/index.wxml" />
     <entry file="file://$PROJECT_DIR$/dist/packages/@minui/wxc-example/dist/index.wxss" />
     <entry file="file://$PROJECT_DIR$/dist/packages/@minui/wxc-example-demo/dist/index.js" />
     <entry file="file://$PROJECT_DIR$/dist/packages/@minui/wxc-example-md/dist/index.js" />
@@ -553,27 +492,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/transfonter.org-20180113-080202 (1)/iconfont.ttf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-771">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/transfonter.org-20180113-080202 (1)/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/font_qx9tds9g00zlg14i/demo_unicode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/transfonter.org-20180113-080202 (1)/iconfont.ttf" />
+    <entry file="file://$USER_HOME$/Downloads/transfonter.org-20180113-080202 (1)/stylesheet.css" />
+    <entry file="file://$USER_HOME$/Downloads/font_qx9tds9g00zlg14i/demo_unicode.html" />
     <entry file="file://$PROJECT_DIR$/src/common/comps/icon/demo.css" />
     <entry file="file://$PROJECT_DIR$/src/common/comps/icon/iconfont.ttf">
       <provider selected="true" editor-type-id="text-editor">
@@ -659,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/button/index.wxc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/elip/index.wxc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -684,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2304">
           <caret line="0" column="11962" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="11962" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -692,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4806">
           <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1494">
           <caret line="83" column="61" lean-forward="false" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,11 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#view#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#text#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="96" column="33" lean-forward="false" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,23 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/mask/index.wxc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/popup/index.wxc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,49 +655,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home/index.wxp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/dialog/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="180">
           <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/popup/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/dialog/index.wxc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="168" column="19" lean-forward="true" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#2;n#view#2;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#2;n#view#3;n#view#0;n#wxc-popup#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/switch/index.wxc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-659">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="1001">
+          <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/cell/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/mask/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/index.wxp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/button/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/button/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

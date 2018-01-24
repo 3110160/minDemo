@@ -1,14 +1,15 @@
 <template>
   <view>
     <wxc-button
-            class="wwe"
+            type="warn"
             text="握手是订单"
             bindmytap="onMyTap"
+            size="small"
     ></wxc-button>
 
       <wxc-popup
               class="popup1"
-              contAlign = 'center'>
+              contAlign = 'left'>
         <view
                 style="background-color: #eeeeee;height: 140px;width:140px"
         >
@@ -33,6 +34,7 @@
           cancelText="取消"
   ></wxc-dialog>
   <wxc-switch></wxc-switch>
+  <wxc-cell></wxc-cell>
 </template>
 
 <script>
@@ -50,7 +52,7 @@ export default {
             'wxc-elip':'common/comps/elip',
             'wxc-loadmore':'common/comps/loadmore',
             'wxc-dialog':'common/comps/dialog',
-            'wxc-switch':'common/comps/switch',
+            'wxc-switch':'common/comps/switch'
         }
     },
     data:{
@@ -117,10 +119,10 @@ export default {
   color: #a9a9a9;
   text-align: center;
 }
-  .bglogo{
-    width: 50px;
-    height: 50px;
-    background-position: center center;
-    background-size: 50px 50px;
-  }
+.bglogo{
+  width: 50px;
+  height: 50px;
+  background-position: center center;
+  background-size: 50px 50px;
+}
 </style>
