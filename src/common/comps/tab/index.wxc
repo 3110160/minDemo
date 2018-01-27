@@ -73,12 +73,13 @@
         methods: {
             onSwitch(e){
                 let currentIndex = e.currentTarget.dataset.idx,
+                    currentKey = e.currentTarget.dataset.key,
                     width = this.data.width;
                 this.setData({
                     activeKey : currentIndex,
                     move: width * currentIndex
                 });
-                this.triggerEvent('onSwitch',e)
+                this.triggerEvent('onSwitch',{key:currentKey})
             }
         },
         attached(){
@@ -107,10 +108,11 @@
 </script>
 
 <style lang="less">
+    @import "../theme";
     .tab{
         background-color: white;
-        border-bottom: 1px solid #eeeeee;
-        border-top: 1px solid #eeeeee;
+        border-bottom: 2rpx solid #eeeeee;
+        border-top: 2rpx solid #eeeeee;
         .tabNavbarWrap{
             position: relative;
             white-space: nowrap;
@@ -118,7 +120,7 @@
             .tabNavbarItem{
                 text-align: center;
                 display: inline-block;
-                line-height: 40px;
+                line-height: 80rpx;
                 font-size: 28rpx;
                 color: #666666;
             }
@@ -126,8 +128,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                height: 2px;
-                background-color: #ff776d;
+                height: 4rpx;
             }
             .lineAnimate{
                 transition: .2s ease;

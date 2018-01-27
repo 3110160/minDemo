@@ -1,0 +1,90 @@
+<template>
+  <view class="container">
+
+    <wxc-example title="icon 常用的字体图标 颜色大小可控(可以自己设计也可去阿里字体库挑选一套)" class="example">
+      <view class="icons">
+        <view class="one" wx:for="{{iconList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+          <wxc-icon
+                  iconStyle="font-size:48rpx;color:#ff7b2e"
+                  icon="{{item.icon}}"
+          ></wxc-icon>
+          <text>{{item.decs}}</text>
+        </view>
+      </view>
+    </wxc-example>
+
+  </view>
+</template>
+
+<script>
+  const app = getApp();
+  import {iconList } from './config'
+export default {
+    config: {
+        usingComponents: {
+            'wxc-example':'common/comps/example',
+            'wxc-icon':'common/comps/icon'
+        }
+    },
+
+    data:{
+        iconList:iconList
+    },
+    //生命周期函数--监听页面加载
+    onLoad () {
+    },
+    //生命周期函数--监听页面初次渲染完成
+    onReady(){
+
+    },
+    //生命周期函数--监听页面显示
+    onShow () {
+    },
+    //生命周期函数--监听页面隐藏
+    onHide(){
+
+    }
+}
+</script>
+
+<style lang="less">
+  .flex_row(){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex_column(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 100%;
+    .flex_column;
+    justify-content: flex-start;
+    .example{
+      width: 100%;
+      .icons{
+        .flex_row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .one{
+          width: 25%;
+          .flex_column;
+          padding: 20rpx;
+          box-sizing: border-box;
+          .icon{
+            font-size: 48rpx;
+          }
+          text{
+            font-size: 28rpx;
+            color: #666;
+          }
+        }
+      }
+    }
+
+  }
+</style>

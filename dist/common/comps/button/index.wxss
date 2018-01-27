@@ -2,16 +2,19 @@
   position: relative;
   color: #333;
   background-color: #fff;
-  margin-bottom: 10px;
   border-radius: 4rpx;
   font-size: 32rpx;
-  line-height: 45px;
-  height: 45px;
+  line-height: 90rpx;
+  height: 90rpx;
   box-sizing: border-box;
   text-decoration: none;
   text-align: center;
   transition: .1s ease;
-  width: 80%;
+  width: 82%;
+  margin: 10rpx 20rpx;
+}
+.btn:active {
+  opacity: .6;
 }
 .primary {
   border: none;
@@ -30,48 +33,49 @@
 }
 .small {
   display: inline-block;
-  height: 30px;
-  line-height: 30px;
+  height: 60rpx;
+  line-height: 60rpx;
   font-size: 24rpx;
   border: none;
   width: auto;
 }
 .mini {
   display: inline-block;
-  line-height: 22px;
-  height: 22px;
+  line-height: 44rpx;
+  height: 44rpx;
   font-size: 20rpx;
   border: none;
   width: auto;
 }
 .large {
   border: none;
-  line-height: 50px;
-  height: 50px;
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 32rpx;
 }
-.btn:active {
-  opacity: .6;
-}
-.btn:disabled {
+.disabled {
   color: #999 !important;
   background: #f8f8f8 !important;
   border-color: #e5e5e5 !important;
   cursor: not-allowed !important;
   opacity: 1 !important;
 }
-.btn:disabled:active {
+.disabled:active {
+  opacity: 1;
+}
+.isLoading:active {
   opacity: 1;
 }
 .loading {
   color: transparent;
   opacity: 1;
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-left: -8px;
-  border: 3px solid #e5e5e5;
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: -16rpx;
+  border: 6rpx solid #e5e5e5;
   border-color: #666 #e5e5e5 #e5e5e5 #e5e5e5;
-  border-radius: 8px;
+  border-radius: 16rpx;
   box-sizing: border-box;
   animation: btn-spin 0.6s linear;
   animation-iteration-count: infinite;

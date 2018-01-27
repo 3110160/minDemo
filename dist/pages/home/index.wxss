@@ -1,36 +1,78 @@
-.index-hd {
-  padding: 70rpx;
-  text-align: center;
-}
-.index-bd {
-  padding: 20rpx 30rpx;
-  background-color: cadetblue;
-  color: #fff;
-  text-align: center;
-}
-.index-ft {
-  padding-bottom: 20rpx;
-  text-align: center;
-}
-.index-logo {
-  width: 100rpx;
-  height: 100rpx;
-}
-.index-desc {
-  margin-top: 20rpx;
-  color: #888888;
-  font-size: 28rpx;
-}
-.provider {
-  position: fixed;
+.topLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  bottom: 120rpx;
-  color: #a9a9a9;
-  text-align: center;
+  height: 200rpx;
+  margin: 20rpx;
 }
-.bglogo {
-  width: 50px;
-  height: 50px;
-  background-position: center center;
-  background-size: 50px 50px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container .list {
+  font-size: 32rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  width: 96%;
+  margin: 20rpx 10rpx;
+}
+.container .list .wweew {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.container .list .wweew .shhd {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+}
+.container .list .wweew .active {
+  color: #ff6600;
+}
+.container .list .wweew .weqwew {
+  animation: animation .2s;
+  margin: 0 40rpx;
+  border-bottom: 2rpx solid rgba(233, 233, 233, 0.7);
+}
+.container .list .wweew .weqwew .chileItem {
+  line-height: 92rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .list .wweew .weqwew .chileItem .icon {
+  margin-right: 20rpx;
+}
+.container .list .wweew .weqwew:last-child {
+  border-bottom: none;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+    margin-top: -72rpx;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.container .banb {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 50rpx;
 }

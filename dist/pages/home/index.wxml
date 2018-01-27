@@ -1,23 +1,27 @@
 <view>
     <!-- wxp template -->
-    <view>
-        <wxc-button type="warn" text="握手是订单" bindmytap="onMyTap" size="small" _pid="{{_pid}}"></wxc-button>
+    <view class="container">
+        <view class="topLogo">
+            <wxc-avatar width="200rpx" height="200rpx" src="{{avatarUrl}}" _pid="{{_pid}}"></wxc-avatar>
+        </view>
 
-        <wxc-popup class="popup1" contAlign="left" _pid="{{_pid}}">
-            <view style="background-color: #eeeeee;height: 140px;width:140px">
-                还好还好
-                <wxc-icon style="color: red" _pid="{{_pid}}"></wxc-icon>
-            </view>
-        </wxc-popup>
-        <wxc-toast class="toast1" iconStyle="color:red" icon="smile" text="还好还好还好还好还好还好还好还好" _pid="{{_pid}}"></wxc-toast>
+        <view class="list">
+            <block wx:for="{{list}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+                <view class="wweew">
+                    <view class="shhd {{item.opened?'active':''}}" data-opened="{{item.opened}}" data-index="{{index}}" bindtap="showContent">{{item.title}}</view>
+                    <view wx:if="{{item.opened}}" class="adahskg">
+                        <block wx:for="{{item.childList}}" wx:key="index" wx:for-index="index" wx:for-item="childItem">
+                            <navigator url="{{childItem.url}}" hover-class="none" class="weqwew">
+                                <view class="chileItem">
+                                    <view>{{childItem.title}}</view>
+                                    <wxc-icon icon="arrow_right" _pid="{{_pid}}"></wxc-icon>
+                                </view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="banb">当前版本1.0.0</view>
     </view>
-    <wxc-loading show="{{loader}}" bgImage="{{bgImage}}" _pid="{{_pid}}"></wxc-loading>
-    <wxc-tab bindonSwitch="onSwitch" _pid="{{_pid}}"></wxc-tab>
-    <wxc-elip line="2" class="sdhs" _pid="{{_pid}}">
-        上的时候说的是卡号多少收到客户可收到收到后收款单号上的上的时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始时候说的是卡号多少收到客户可收到收到后收款单号是多少的开始是多少的开始
-    </wxc-elip>
-    <wxc-loadmore _pid="{{_pid}}"></wxc-loadmore>
-    <wxc-dialog class="dialog" title="标题" horizontal="{{false}}" content="我是内容我是内容我是内容我是内容" confirmText="确定" cancelText="取消" _pid="{{_pid}}"></wxc-dialog>
-    <wxc-switch _pid="{{_pid}}"></wxc-switch>
-    <wxc-cell></wxc-cell>
 </view>

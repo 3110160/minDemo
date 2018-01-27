@@ -1,13 +1,26 @@
 {
   "pages": [
-    "pages/home/index"
+    "pages/home/index",
+    "pages/button/index",
+    "pages/color/index",
+    "pages/dialog/index",
+    "pages/elip/index",
+    "pages/foot/index",
+    "pages/icon/index",
+    "pages/loading/index",
+    "pages/loadMore/index",
+    "pages/popup/index",
+    "pages/switch/index",
+    "pages/tab/index",
+    "pages/toast/index",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "backgroundColor": "#efefef",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "Mindemo",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ff720f",
+    "navigationBarTitleText": "快麦小程序组件",
+    "navigationBarTextStyle": "#333"
   },
   "networkTimeout": {
     "request": 10000

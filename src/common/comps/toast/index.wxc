@@ -1,9 +1,9 @@
 <template>
     <view class="toast" wx:if="{{show}}">
-        <view class="toastBox {{show?'toastBoxShow':'toastBoxHide'}}">
+        <view class="toastBox {{show?'toastBoxShow':'toastBoxHide'}}" style="text-align: {{textAlign}}">
             <view wx:if="{{icon || iconImage}}" class="toastIcon">
                 <block wx:if="{{icon && !iconImage}}">
-                    <wxc-icon icon="{{icon}}" style="{{iconStyle}}"></wxc-icon>
+                    <wxc-icon icon="{{icon}}" iconStyle="{{iconStyle}}"></wxc-icon>
                 </block>
                 <image wx:if="{{iconImage}}" class="toastImage" src="{{iconImage}}" mode="widthFix"></image>
             </view>
@@ -37,6 +37,10 @@
             iconImage: {
                 type: String,
                 value: ''
+            },
+            textAlign:{
+                type: String,
+                value:''
             },
             iconStyle: {
                 type: String,
@@ -78,6 +82,7 @@
 </script>
 
 <style lang="less">
+    @import "../theme";
     .toast{
         z-index: 999;
         position: fixed;
@@ -95,7 +100,7 @@
             display: block;
             min-width: 300rpx;
             max-width: 426rpx;
-            background-color: #000;
+            background-color:@toastBox_bg;
             opacity: 0.7;
             padding: 24rpx 30rpx;
             text-align: center;
@@ -103,12 +108,12 @@
             .toastIcon{
                 display: block;
                 width: 68rpx;
-                height: 68rpx;
-                line-height: 68rpx;
+                height: 40rpx;
+                line-height: 40rpx;
                 margin: 0 auto 18rpx auto;
                 .toastImage{
-                    width: 68rpx;
-                    height: 68rpx;
+                    width: 40rpx;
+                    height: 40rpx;
                 }
             }
             .toastTitle{

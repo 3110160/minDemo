@@ -15,26 +15,47 @@
       window: {
         backgroundTextStyle: 'dark',
         backgroundColor: '#efefef',
-        navigationBarBackgroundColor: '#ffffff',
-        navigationBarTitleText: 'Mindemo',
-        navigationBarTextStyle: 'black'
+        navigationBarBackgroundColor: '#ff720f',
+        navigationBarTitleText: '快麦小程序组件',
+        navigationBarTextStyle: '#333',
       },
       networkTimeout: {
         request: 10000
       }
     },
-    globalData: { },
-    onLaunch () { },
+    globalData: {avatarUrl:''},
+
+    getUserInfo(){
+        let that = this;
+        wx.getUserInfo({
+            success: function(res) {
+                let userInfo = res.userInfo;
+                let nickName = userInfo.nickName,
+                 avatarUrl = userInfo.avatarUrl,
+                 gender = userInfo.gender,//性别 0：未知、1：男、2：女
+                 province = userInfo.province,
+                 city = userInfo.city,
+                 country = userInfo.country;
+                 that.globalData.avatarUrl = avatarUrl;
+            }
+        })
+
+    },
+    onLaunch () {
+        this.getUserInfo();
+    },
     onShow () { },
     onHide () { }
   }
 </script>
 
-<style>
+<style lang="less">
 page {
   background-color: #F8F8F8;
   height: 100%;
   font-size: 32rpx;
-  line-height: 1.5;
+  .container{
+    padding-bottom: 100rpx;
+  }
 }
 </style>

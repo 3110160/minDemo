@@ -12,16 +12,8 @@
         properties: {
             line: {
                 type: Number,
-                value: ''
+                value: 1
             },
-            class:{
-                type:String,
-                value:''
-            },
-            style:{
-                type:String,
-                value:''
-            }
         },
         data: {
 

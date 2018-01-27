@@ -1,0 +1,108 @@
+<template>
+    <view class="container">
+
+        <wxc-example title="loading 默认" class="example">
+            <wxc-button size="small" type="danger" text="show" data-loading="loading1"
+                        bindmytap="showLoading"></wxc-button>
+            <wxc-loading
+                    class="loading1"
+            ></wxc-loading>
+        </wxc-example>
+
+        <wxc-example title="loading 加背景图" class="example">
+            <wxc-button size="small" type="warn" text="show" data-loading="loading2"
+                        bindmytap="showLoading"></wxc-button>
+            <wxc-loading
+                    class="loading2"
+                    bgImage="{{logo}}"
+            ></wxc-loading>
+        </wxc-example>
+
+    </view>
+</template>
+
+<script>
+    const app = getApp();
+    import {logo} from '../../utils/base64'
+
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-example': 'common/comps/example',
+                'wxc-button': 'common/comps/button',
+                'wxc-loading': 'common/comps/loading'
+            }
+        },
+
+        data: {
+            logo: logo
+        },
+        showLoading(e) {
+            let loadingIndex = e.target.dataset.loading;
+            let loadingCom = this.selectComponent(`.${loadingIndex}`);
+            loadingCom && loadingCom.show();
+            let timer = setTimeout(() => {
+                loadingCom.hide();
+                clearTimeout(timer);
+            }, 2000);
+        },
+        //生命周期函数--监听页面加载
+        onLoad() {
+        },
+        //生命周期函数--监听页面初次渲染完成
+        onReady() {
+
+        },
+        //生命周期函数--监听页面显示
+        onShow() {
+        },
+        //生命周期函数--监听页面隐藏
+        onHide() {
+
+        }
+    }
+</script>
+
+<style lang="less">
+    .flex_row() {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_column() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        .flex_column;
+        justify-content: flex-start;
+        .example {
+            width: 100%;
+        }
+        .topPop {
+            height: 100 rpx;
+            width: 100%;
+            text-align: center;
+            line-height: 72 rpx;
+            background-color: white;
+        }
+        .leftPop {
+            width: 200 rpx;
+            height: 100%;
+            background-color: white;
+        }
+        .center {
+            width: 300 rpx;
+            height: 200 rpx;
+            text-align: center;
+            background-color: white;
+        }
+
+    }
+</style>

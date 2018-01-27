@@ -1,0 +1,144 @@
+<template>
+    <view class="container">
+
+        <wxc-example title="popup" class="example">
+            <wxc-button size="small" type="danger" text="从上面展示" data-popup="popup1" bindmytap="showDialog"></wxc-button>
+            <wxc-popup
+                    class="popup1"
+            >
+                <view class="topPop">
+                    我是顶部出来的
+                </view>
+            </wxc-popup>
+        </wxc-example>
+
+        <wxc-example title="popup" class="example">
+            <wxc-button size="small" type="warn" text="从左面展示" data-popup="popup2" bindmytap="showDialog"></wxc-button>
+            <wxc-popup
+                    class="popup2"
+                    contAlign="left"
+            >
+                <view class="leftPop">
+                    我是从左边出来的
+                </view>
+            </wxc-popup>
+        </wxc-example>
+
+        <wxc-example title="popup" class="example">
+            <wxc-button size="small" type="danger" text="从下边展示" data-popup="popup3" bindmytap="showDialog"></wxc-button>
+            <wxc-popup
+                    class="popup3"
+                    contAlign="bottom"
+            >
+                <view class="topPop">
+                    我是底部出来的
+                </view>
+            </wxc-popup>
+        </wxc-example>
+
+        <wxc-example title="popup" class="example">
+            <wxc-button size="small" type="warn" text="从右面展示" data-popup="popup4" bindmytap="showDialog"></wxc-button>
+            <wxc-popup
+                    class="popup4"
+                    contAlign="right"
+            >
+                <view class="leftPop">
+                    我是从右边出来的
+                </view>
+            </wxc-popup>
+        </wxc-example>
+
+        <wxc-example title="popup" class="example">
+            <wxc-button size="small" type="primary" text="从中间展示" data-popup="popup5"
+                        bindmytap="showDialog"></wxc-button>
+            <wxc-popup
+                    class="popup5"
+                    contAlign="center"
+            >
+                <view class="center">
+                    我是从中间边出来的
+                </view>
+            </wxc-popup>
+        </wxc-example>
+
+    </view>
+</template>
+
+<script>
+    const app = getApp();
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-example': 'common/comps/example',
+                'wxc-popup': 'common/comps/popup',
+                'wxc-button': 'common/comps/button'
+            }
+        },
+
+        data: {},
+        showDialog(e) {
+            let popupIndex = e.target.dataset.popup;
+            let popupCom = this.selectComponent(`.${popupIndex}`);
+            popupCom && popupCom.show();
+        },
+
+        //生命周期函数--监听页面加载
+        onLoad() {
+        },
+        //生命周期函数--监听页面初次渲染完成
+        onReady() {
+
+        },
+        //生命周期函数--监听页面显示
+        onShow() {
+        },
+        //生命周期函数--监听页面隐藏
+        onHide() {
+
+        }
+    }
+</script>
+
+<style lang="less">
+    .flex_row() {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_column() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        .flex_column;
+        justify-content: flex-start;
+        .example {
+            width: 100%;
+        }
+        .topPop {
+            height: 100 rpx;
+            width: 100%;
+            text-align: center;
+            line-height: 72 rpx;
+            background-color: white;
+        }
+        .leftPop {
+            width: 200 rpx;
+            height: 100%;
+            background-color: white;
+        }
+        .center {
+            width: 300 rpx;
+            height: 200 rpx;
+            text-align: center;
+            background-color: white;
+        }
+
+    }
+</style>

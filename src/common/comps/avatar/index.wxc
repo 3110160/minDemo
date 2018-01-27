@@ -1,0 +1,74 @@
+<template>
+    <view class="avatar">
+        <block wx:if="{{src}}">
+            <view class="avatarPic avatarMold_{{mold}}" style="background-image: url({{src}}); background-repeat: no-repeat; background-position: center center; background-size: cover;width:{{width}};height: {{height}}"></view>
+        </block>
+        <wxc-badge class="avatarBadge" wx:if="{{count}}" value="{{count}}"></wxc-badge>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-badge':'common/comps/badge'
+            }
+        },
+        properties: {
+            src: {
+                type: String,
+                value: ''
+            },
+            mold: {
+                type: String,
+                value: 'circle'
+            },
+            width: {
+                type: String,
+                value: '100%'
+            },
+            height: {
+                type: String,
+                value: '100%'
+            },
+            count: {
+                type: Number,
+                value: ''
+            }
+        },
+        data: {
+
+        },
+        methods: {
+
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .avatar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .avatarPic {
+            display: block;
+            top: 0;
+            left: 0;
+        }
+        .avatarMold_circle {
+            border-radius: 50%;
+        }
+        .avatarBadge {
+            position: absolute;
+            top: 0;
+            right: 28rpx;
+            z-index: 1;
+        }
+    }
+</style>

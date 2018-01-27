@@ -1,0 +1,58 @@
+<template>
+    <view class="example">
+        <view class="title" wx:if="{{title}}">
+            <wxc-icon icon="star" style="margin-right: 10rpx;color: #ff6600"></wxc-icon>
+            <text>{{title}}</text>
+        </view>
+        <slot></slot>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-icon':'common/comps/icon',
+            }
+        },
+        properties: {
+            title:{
+                type:String,
+                value:''
+            },
+            source:{
+                type:String,
+                value:''
+            }
+        },
+        data: {
+
+        },
+        methods: {
+
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .example{
+        background-color: white;
+        margin: 20rpx;
+        padding: 20rpx;
+        box-shadow:0 0 26rpx 4rpx #88888852;
+        .title{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 2rpx solid rgba(168, 168, 168, 0.28);
+            padding: 10rpx 0 20rpx 0;
+            margin: 0 0 20rpx 0;
+        }
+    }
+</style>

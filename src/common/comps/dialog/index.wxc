@@ -2,7 +2,7 @@
     <wxc-popup contAlign="center" locked="true" class="popup">
         <view class="dialog">
             <view class="dialogTitle" wx:if="{{title}}" style="color: {{titleColor}}">{{title}}</view>
-            <view class="dialogContent">
+            <view class="dialogContent" style="padding-top: {{!title?'20rpx':'0'}}">
                 <image class="dialogContentImage" wx:if="{{image}}" src="{{image}}" mode="aspectFill"></image>
                 <view class="dialogContentText" wx:if="{{content}}" style="color: {{contentColor}}">{{content}}</view>
                 <slot></slot>
@@ -95,24 +95,22 @@
             }
         }
     }
-
-
 </script>
 
 <style lang="less">
+    @import "../theme";
      .dialog {
-        background: #ffffff;
         width: 560rpx;
         border-radius: 8rpx;
         background-color: #ffffff;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        padding-top: 10px;
+        padding-top: 20rpx;
 
         .dialogTitle {
             font-size: 36rpx;
-            margin-bottom: 18px;
+            margin-bottom: 36rpx;
             padding: 0 36rpx;
         }
 
@@ -123,7 +121,7 @@
 
             .dialogContentImage{
                 width: 488rpx;
-                height: 330px;
+                height: 660rpx;
                 background-color: #ebebeb;
                 margin: 6rpx 36rpx 18rpx;
             }
@@ -139,7 +137,7 @@
             width: 100%;
             line-height: 100rpx;
             min-height: 100rpx;
-            border-top: 1px solid #e5e5e5;
+            border-top: 2rpx solid #e5e5e5;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -147,35 +145,38 @@
             font-size: 36rpx;
             .dialogCancel {
                 flex: 1;
-                border-right: 1px solid #e5e5e5;
+                border-right: 2rpx solid #e5e5e5;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color:@dialogCancel_color;
             }
             .dialogConfirm {
                 flex: 1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color:@dialogConfirm_color;
             }
             .dialogConfirmSecond {
-                border-right: 1px solid #e5e5e5;
+                border-right: 2rpx solid #e5e5e5;
                 flex: 1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color:@dialogConfirmSecond_color;
             }
         }
          .vertical{
              flex-direction: column;
              font-size: 36rpx;
              .dialogCancel{
-                 border-bottom: 1px solid #e5e5e5;
+                 border-bottom: 2rpx solid #e5e5e5;
                  border-right: none;
                  width: 100%;
              }
              .dialogConfirmSecond{
-                 border-bottom: 1px solid #e5e5e5;
+                 border-bottom: 2rpx solid #e5e5e5;
                  border-right: none;
                  width: 100%;
              }

@@ -24,15 +24,15 @@
         properties: {
             show:{
                 type:Boolean,
-                value:true
+                value:false
             },
             isEnd:{
                 type:Boolean,
-                value:true
+                value:false
             },
             endType:{
                 type:String,
-                value:'a'
+                value:''
             }
         },
         data: {

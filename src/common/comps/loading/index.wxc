@@ -23,7 +23,7 @@
         properties: {
             show: {
                 type: Boolean,
-                value: true
+                value: false
             },
             bgImage:{
                 type:String,
@@ -53,6 +53,7 @@
 </script>
 
 <style lang="less">
+    @import "../theme";
     .loading{
         position: fixed;
         display: flex;
@@ -79,7 +80,7 @@
                 border-top: 4rpx solid rgba(0, 0, 0, 0.2);
                 border-right: 4rpx solid rgba(0, 0, 0, 0.2);
                 border-bottom: 4rpx solid rgba(0, 0, 0, 0.2);
-                border-left: 4rpx solid #ff776d;
+                border-left: 4rpx solid @loader_color;
                 -webkit-animation: loadAnimation 1.1s infinite linear;
                 animation: loadAnimation 1.1s infinite linear;
             }

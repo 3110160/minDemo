@@ -1,0 +1,98 @@
+<template>
+    <view class="container">
+        <view class="content">
+            <text>
+                设计标准字体：中文是苹方，英文是San Francisco
+                默认行高为1.5倍
+            </text>
+            <block wx:for="{{list}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+                <view style="font-size: {{item.size}};color: #333333;margin-top: 10px">{{item.name}}</view>
+                <view>{{item.note}}</view>
+            </block>
+        </view>
+    </view>
+</template>
+
+<script>
+    const app = getApp();
+    export default {
+        config: {},
+        data: {
+            list: [{
+                name: '36rpx号字',
+                size: '36rpx',
+                note: '在哪里用'
+            }, {
+                name: '32rpx号字',
+                size: '32rpx',
+                note: '在哪里用'
+            }, {
+                name: '28rpx号字',
+                size: '28rpx',
+                note: '在哪里用'
+            }, {
+                name: '24rpx号字',
+                size: '24rpx',
+                note: '在哪里用'
+            }, {
+                name: '22rpx号字',
+                size: '22rpx',
+                note: '在哪里用'
+            }, {
+                name: '20rpx号字',
+                size: '20rpx',
+                note: '在哪里用'
+            }]
+
+        },
+
+        //生命周期函数--监听页面加载
+        onLoad() {
+        },
+        //生命周期函数--监听页面初次渲染完成
+        onReady() {
+
+        },
+        //生命周期函数--监听页面显示
+        onShow() {
+        },
+        //生命周期函数--监听页面隐藏
+        onHide() {
+
+        }
+    }
+</script>
+
+<style lang="less">
+    .flex_row() {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_column() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        .flex_column;
+        padding: 0 40rpx 40rpx 40rpx;
+        justify-content: flex-start;
+        background-color: #FFFFFF;
+        .content {
+            box-sizing: border-box;
+            padding: 30 rpx 30 rpx 100 rpx 30 rpx;
+            width: 100%;
+            border-top: 2 rpx solid #e2e2e2;
+            font-size: 30 rpx;
+            color: #666666;
+            > text {
+                line-height: 26px;
+            }
+        }
+    }
+</style>

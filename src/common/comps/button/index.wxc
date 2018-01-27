@@ -1,7 +1,8 @@
 <template>
-    <button class="btn {{currentType}} {{currentSize}}" bindtap="myTap" style="background-color: {{bgColor}};width: {{width.indexOf('%')>-1?width:width}}">
+    <button disabled="{{disabled}}" class="btn {{currentType}} {{currentSize}} {{disabled?'disabled':''}} {{loading?'isLoading':''}}" bindtap="myTap" style="background-color: {{bgColor}};width: {{width.indexOf('%')>-1?width:width}}">
         <span wx:if="loading" class="{{loading?'loading':''}}"></span>
         {{text}}
+        <slot wx:if="{{!text}}"></slot>
     </button>
 </template>
 
@@ -11,11 +12,15 @@
         properties: {
             text: {
                 type: String,
-                value: '按钮'
+                value: ''
             },
             bgColor:{
                 type:String,
                 value:''
+            },
+            disabled:{
+                type:Boolean,
+                value:false
             },
             loading:{
               type:Boolean,
@@ -74,7 +79,7 @@
         },
         methods:{
             myTap(e){
-                console.log(33);
+                if(this.data.loading) return false;
                 this.triggerEvent('mytap',e)
             }
         },
@@ -84,61 +89,64 @@
 </script>
 
 <style lang="less">
+    @import "../theme.less";
     .btn{
         position: relative;
         color: #333;
         background-color: #fff;
-        margin-bottom: 10px;
         border-radius: 4rpx;
         font-size: 32rpx;
-        line-height: 45px;
-        height: 45px;
+        line-height: 90rpx;
+        height: 90rpx;
         box-sizing: border-box;
         text-decoration: none;
         text-align: center;
         transition: .1s ease;
-        width: 80%;
+        width: 82%;
+        margin: 10rpx 20rpx;
+        &:active{
+            opacity: .6;
+        }
     }
     .primary{
         border: none;
         color: #fff;
-        background-color: #4b0;
+        background-color:@btn_primary_color;
     }
     .warn {
         color: #fff;
-        background-color: #f85;
+        background-color:@btn_warn_color;
         border: none;
     }
     .danger {
         color: #fff;
-        background-color: #f44;
+        background-color:@btn_danger_color;
         border: none;
     }
     .small{
         display: inline-block;
-        height: 30px;
-        line-height: 30px;
-        font-size: 24rpx;
+        height: @btn_small_height;
+        line-height: @btn_small_height;
+        font-size: @btn_small_fontSize;
         border: none;
         width: auto;
     }
     .mini {
         display: inline-block;
-        line-height: 22px;
-        height: 22px;
-        font-size: 20rpx;
+        line-height: @btn_mini_height;
+        height: @btn_mini_height;
+        font-size: @btn_mini_fontSize;
         border: none;
         width: auto;
     }
     .large {
         border: none;
-        line-height: 50px;
-        height: 50px;
+        line-height:@btn_large_height;
+        height:@btn_large_height;
+        font-size: @btn_large_fontSize;
     }
-    .btn:active{
-        opacity: .6;
-    }
-    .btn:disabled{
+
+    .disabled{
         color: #999 !important;
         background: #f8f8f8 !important;
         border-color: #e5e5e5 !important;
@@ -148,18 +156,19 @@
             opacity: 1;
         }
     }
-    .loading {
+    .isLoading:active{
+        opacity: 1;
     }
     .loading{
         color: transparent;
         opacity: 1;
         display: inline-block;
-        width: 14px;
-        height: 14px;
-        margin-left: -8px;
-        border: 3px solid #e5e5e5;
+        width: 28rpx;
+        height: 28rpx;
+        margin-left: -16rpx;
+        border: 6rpx solid #e5e5e5;
         border-color: #666 #e5e5e5 #e5e5e5 #e5e5e5;
-        border-radius: 8px;
+        border-radius: 16rpx;
         box-sizing: border-box;
         animation: btn-spin .6s linear;
         animation-iteration-count: infinite

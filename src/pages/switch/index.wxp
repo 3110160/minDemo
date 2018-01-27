@@ -1,0 +1,127 @@
+<template>
+    <view class="container">
+
+        <wxc-example title="switch 默认 checked:{{checked}}" class="example">
+            <wxc-switch
+                    bindswitch="onSwitch"
+                    checked="{{checked}}"
+            ></wxc-switch>
+        </wxc-example>
+
+        <wxc-example title="switch 默认 disabled" class="example">
+            <wxc-switch
+                    disabled="{{true}}"
+                    checked="{{true}}"
+            ></wxc-switch>
+        </wxc-example>
+
+        <wxc-example title="switch 异步请求loading checked:{{checked1}}" class="example">
+            <wxc-switch
+                    bindswitch="onSwitch1"
+                    loading="{{loading}}"
+                    checked="{{checked1}}"
+            ></wxc-switch>
+        </wxc-example>
+
+    </view>
+</template>
+
+<script>
+    const app = getApp();
+    import {logo} from '../../utils/base64'
+
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-example': 'common/comps/example',
+                'wxc-button': 'common/comps/button',
+                'wxc-switch': 'common/comps/switch'
+            }
+        },
+
+        data: {
+            checked:false,
+            loading:false,
+            checked1:false
+        },
+        onSwitch(e) {
+            let checked = e.detail.checked;
+            this.setData({
+                checked:checked
+            })
+
+        },
+        onSwitch1(e) {
+            let checked = e.detail.checked;
+            this.setData({
+                loading:true
+            });
+            let timer = setTimeout(()=>{
+                this.setData({
+                    loading:false,
+                    checked1:checked
+                });
+                clearTimeout(timer);
+            },1500)
+
+        },
+        //生命周期函数--监听页面加载
+        onLoad() {
+        },
+        //生命周期函数--监听页面初次渲染完成
+        onReady() {
+
+        },
+        //生命周期函数--监听页面显示
+        onShow() {
+        },
+        //生命周期函数--监听页面隐藏
+        onHide() {
+
+        }
+    }
+</script>
+
+<style lang="less">
+    .flex_row() {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_column() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        .flex_column;
+        justify-content: flex-start;
+        .example {
+            width: 100%;
+        }
+        .topPop {
+            height: 100 rpx;
+            width: 100%;
+            text-align: center;
+            line-height: 72 rpx;
+            background-color: white;
+        }
+        .leftPop {
+            width: 200 rpx;
+            height: 100%;
+            background-color: white;
+        }
+        .center {
+            width: 300 rpx;
+            height: 200 rpx;
+            text-align: center;
+            background-color: white;
+        }
+
+    }
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <view class="icon icon_{{icon}}" style="{{style}}"></view>
+    <view class="icon icon_{{icon}}" style="{{iconStyle}}"></view>
 </template>
 
 <script>
@@ -11,7 +11,7 @@
                 type: String,
                 value: 'icon_smile'
             },
-            style: {
+            iconStyle: {
                 type: String,
                 value: ''
             }
