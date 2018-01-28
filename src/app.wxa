@@ -14,7 +14,6 @@
       pages: [],
       window: {
         backgroundTextStyle: 'dark',
-        backgroundColor: '#efefef',
         navigationBarBackgroundColor: '#ff720f',
         navigationBarTitleText: '快麦小程序组件',
         navigationBarTextStyle: '#333',
@@ -41,7 +40,8 @@
         })
 
     },
-    onLaunch () {
+    onLaunch (options) {
+        console.log(options)
         this.getUserInfo();
     },
     onShow () { },
@@ -55,6 +55,7 @@ page {
   height: 100%;
   font-size: 32rpx;
   .container{
+    box-sizing: border-box;
     padding-bottom: 100rpx;
   }
 }

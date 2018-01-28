@@ -60,6 +60,7 @@
 
 <script>
   const app = getApp();
+  import wxrequest from '../../utils/http'
 export default {
     config: {
         usingComponents: {
@@ -75,12 +76,28 @@ export default {
         this.setData({
             loading:true
         });
-        let timer= setTimeout(()=>{
+        wxrequest('post','/security/wxmp/login',{
+            mobile:'1585713473',
+           code:'1513',
+        })
+            .then((res)=>{
+                console.log(res);
+                this.setData({
+                    loading:false,
+                });
+            })
+            .catch((e)=>{
+              console.log(e);
+                this.setData({
+                    loading:false,
+                });
+            });
+        /*let timer= setTimeout(()=>{
             this.setData({
                 loading:false,
             });
             clearTimeout(timer)
-        },2000)
+        },2000)*/
     },
     //生命周期函数--监听页面加载
     onLoad () {

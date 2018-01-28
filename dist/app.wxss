@@ -4,5 +4,6 @@ page {
   font-size: 32rpx;
 }
 page .container {
+  box-sizing: border-box;
   padding-bottom: 100rpx;
 }

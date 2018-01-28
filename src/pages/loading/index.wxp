@@ -18,6 +18,16 @@
             ></wxc-loading>
         </wxc-example>
 
+        <wxc-example title="微信原生顶部loading" class="example">
+            <wxc-button size="small" type="warn" text="show"
+                        bindmytap="showLoading"></wxc-button>
+        </wxc-example>
+
+        <wxc-example title="页面下拉刷新 pulling={{pulling}}" class="example">
+            <wxc-button size="small" type="warn" text="下拉结束"
+                        bindmytap="pullEnd"></wxc-button>
+        </wxc-example>
+
     </view>
 </template>
 
@@ -27,6 +37,7 @@
 
     export default {
         config: {
+            enablePullDownRefresh:true,
             usingComponents: {
                 'wxc-example': 'common/comps/example',
                 'wxc-button': 'common/comps/button',
@@ -41,17 +52,29 @@
             let loadingIndex = e.target.dataset.loading;
             let loadingCom = this.selectComponent(`.${loadingIndex}`);
             loadingCom && loadingCom.show();
+            if(!loadingIndex){
+                wx.showNavigationBarLoading();
+            }
             let timer = setTimeout(() => {
-                loadingCom.hide();
+                loadingCom &&loadingCom.hide();
+                wx.hideNavigationBarLoading();
                 clearTimeout(timer);
             }, 2000);
+        },
+
+        //监听下拉事件
+        onPullDownRefresh: function(){
+            this.setData({pulling:true})
+        },
+        pullEnd(){
+            wx.stopPullDownRefresh();
+            this.setData({pulling:false})
         },
         //生命周期函数--监听页面加载
         onLoad() {
         },
         //生命周期函数--监听页面初次渲染完成
         onReady() {
-
         },
         //生命周期函数--监听页面显示
         onShow() {

@@ -3,14 +3,15 @@
 
         <wxc-example title="popup" class="example">
             <wxc-button size="small" type="danger" text="从上面展示" data-popup="popup1" bindmytap="showDialog"></wxc-button>
-            <wxc-popup
-                    class="popup1"
-            >
-                <view class="topPop">
-                    我是顶部出来的
-                </view>
-            </wxc-popup>
         </wxc-example>
+
+        <wxc-popup
+                class="popup1"
+        >
+            <view style="height: 100rpx" class="topPopup">
+                我是顶部出来的
+            </view>
+        </wxc-popup>
 
         <wxc-example title="popup" class="example">
             <wxc-button size="small" type="warn" text="从左面展示" data-popup="popup2" bindmytap="showDialog"></wxc-button>
@@ -30,7 +31,7 @@
                     class="popup3"
                     contAlign="bottom"
             >
-                <view class="topPop">
+                <view style="height: 100rpx" class="topPopup">
                     我是底部出来的
                 </view>
             </wxc-popup>
@@ -55,7 +56,7 @@
                     class="popup5"
                     contAlign="center"
             >
-                <view class="center">
+                <view style="width: 300rpx;height: 200rpx" class="center">
                     我是从中间边出来的
                 </view>
             </wxc-popup>
@@ -120,8 +121,9 @@
         justify-content: flex-start;
         .example {
             width: 100%;
+
         }
-        .topPop {
+        .topPopup {
             height: 100 rpx;
             width: 100%;
             text-align: center;
@@ -139,6 +141,6 @@
             text-align: center;
             background-color: white;
         }
-
     }
+
 </style>

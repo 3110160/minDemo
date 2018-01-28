@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "wxc-avatar": "../../common/comps/avatar/index",
-    "wxc-icon": "../../common/comps/icon/index"
-  }
-}
