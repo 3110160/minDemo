@@ -1,0 +1,43 @@
+<template>
+    <view class="radio">
+        <block wx:for="{{radioList}}" wx:key="{{index}}" wx:for-index="{{index}}" wx:for-item="{{item}}">
+            <view class="radioItem {{item.disabled?'disabled':''}}" data-value="{{item.value}}" bindtap="onChange">
+                <view class="name">{{item.name}}</view>
+                <view class="radioBox {{item.value==value?'active':''}}"></view>
+            </view>
+        </block>
+    </view>
+</template>
+
+<script>
+    export default {
+        config: {
+
+        },
+        properties: {
+            value: {
+                type: [String],
+                value: ''
+            },
+            radioList: {
+                type: [Array]
+            }
+        },
+        data: {
+
+        },
+        methods: {
+            onChange(e){
+                console.log(e)
+            }
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+
+</style>
