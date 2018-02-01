@@ -9,9 +9,9 @@
 
 | 名称                  | 描述                         |
 |----------------------|------------------------------|
-|`value`                | 想要显示的数值 [Number, String],|
-|`max`                  | 最大数值       [Number, String],
-|`type`                 | 想要显示数值还是一个圆点 [String]  'number'/'dot'
+|`value`                | 显示值[String],|
+|`radioList`            |radio 列表 [Array],
+
 
 
 

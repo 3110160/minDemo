@@ -1,0 +1,82 @@
+<template>
+  <view class="container">
+
+    <wxc-example title="radio value={{value}} disabled" class="example">
+      <wxc-radio
+          radioList="{{radioList}}"
+          bindonChange="onChange"
+          value="1"
+      >
+      </wxc-radio>
+    </wxc-example>
+
+  </view>
+</template>
+
+<script>
+  const app = getApp();
+export default {
+    config: {
+        usingComponents: {
+            'wxc-example':'common/comps/example',
+            'wxc-radio':'common/comps/radio'
+        }
+    },
+
+    data:{
+        radioList:[{
+            name:'radio1',
+            value:'1'
+        },{
+            name:'radio2',
+            value:'2',
+            disabled:true
+        },{
+            name:'radio3',
+            value:'3'
+        }]
+
+    },
+    onChange(e){
+        this.setData({value:e.detail.value});
+    },
+    //生命周期函数--监听页面加载
+    onLoad () {
+    },
+    //生命周期函数--监听页面初次渲染完成
+    onReady(){
+
+    },
+    //生命周期函数--监听页面显示
+    onShow () {
+    },
+    //生命周期函数--监听页面隐藏
+    onHide(){
+
+    }
+}
+</script>
+
+<style lang="less">
+  .flex_row(){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex_column(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 100%;
+    .flex_column;
+    justify-content: flex-start;
+    .example{
+      width: 100%;
+    }
+
+  }
+</style>

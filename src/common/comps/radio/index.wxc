@@ -1,9 +1,9 @@
 <template>
     <view class="radio">
-        <block wx:for="{{radioList}}" wx:key="{{index}}" wx:for-index="{{index}}" wx:for-item="{{item}}">
-            <view class="radioItem {{item.disabled?'disabled':''}}" data-value="{{item.value}}" bindtap="onChange">
-                <view class="name">{{item.name}}</view>
+        <block wx:for="{{radioList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <view class="radioItem {{item.disabled?'disabled':''}}" data-index="{{index}}" bindtap="onChange">
                 <view class="radioBox {{item.value==value?'active':''}}"></view>
+                <view class="name">{{item.name}}</view>
             </view>
         </block>
     </view>
@@ -28,7 +28,12 @@
         },
         methods: {
             onChange(e){
-                console.log(e)
+                let {radioList} = this.data,
+                    index = e.currentTarget.dataset.index,
+                    item = radioList[index];
+                if(item.disabled) return false;
+                this.setData({value:item.value});
+                this.triggerEvent('onChange',{value:item.value})
             }
         },
         attached(){
@@ -39,5 +44,63 @@
 </script>
 
 <style lang="less">
-
+    @import "../theme";
+    .radio{
+        width: 100%;
+        background-color:white;
+        border-bottom: 2rpx solid rgba(0, 0, 0, 0.07);
+        border-top: 2rpx solid rgba(0, 0, 0, 0.07);
+        padding: 0 20rpx;
+        box-sizing: border-box;
+        .radioItem{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            line-height: 72rpx;
+            font-size: 32rpx;
+            color: #666666;
+            border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
+            &:last-child{
+                border-bottom:none;
+            }
+            .radioBox{
+                width: 28rpx;
+                height: 28rpx;
+                border-radius: 50%;
+                border:4rpx solid rgba(0, 0, 0, 0.18);
+                margin-right: 20rpx;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 14rpx;
+                    height: 14rpx;
+                    background-color:rgba(0, 0, 0, 0.18);
+                    border-radius: 50%;
+                    top: 8rpx;
+                    left: 8rpx;
+                }
+            }
+            .active{
+                &::after{
+                    width: 17rpx;
+                    height: 17rpx;
+                    background-color:@radio_active;
+                    border-radius: 50%;
+                    top: 7rpx;
+                    left: 7rpx;
+                }
+            }
+        }
+        .disabled{
+            color: #eeeeee;
+            .radioBox{
+                border-color:#eeeeee;
+                &::after{
+                    background-color:#eeeeee;
+                }
+            }
+        }
+    }
 </style>

@@ -10,6 +10,7 @@
     "pages/loading/index",
     "pages/loadMore/index",
     "pages/popup/index",
+    "pages/radio/index",
     "pages/switch/index",
     "pages/tab/index",
     "pages/toast/index"
