@@ -13,7 +13,8 @@
     "pages/radio/index",
     "pages/switch/index",
     "pages/tab/index",
-    "pages/toast/index"
+    "pages/toast/index",
+    "pages/checkbox/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

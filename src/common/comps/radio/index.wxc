@@ -74,8 +74,8 @@
                 &::after{
                     content: '';
                     position: absolute;
-                    width: 14rpx;
-                    height: 14rpx;
+                    width: 13rpx;
+                    height: 13rpx;
                     background-color:rgba(0, 0, 0, 0.18);
                     border-radius: 50%;
                     top: 8rpx;
@@ -90,6 +90,7 @@
                     border-radius: 50%;
                     top: 7rpx;
                     left: 7rpx;
+                    transition: .2s ease;
                 }
             }
         }

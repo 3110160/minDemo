@@ -1,0 +1,160 @@
+<template>
+    <view class="checkbox">
+        <block wx:for="{{checkList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <view class="checkItem {{item.disabled?'disabled':''}}" data-index="{{index}}" bindtap="onChange">
+                <view class="checkBox {{item.checked?'active':''}}"></view>
+                <view class="name">{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+</template>
+
+<script>
+    Array.prototype.contains = function (obj) {
+        let i = this.length;
+        while (i--) {
+            if (this[i] === obj) {
+                return true;
+            }
+        }
+        return false;
+    };
+    export default {
+        config: {
+
+        },
+        properties: {
+            value: {
+                type: [Array],
+                value: ''
+            },
+            checkList: {
+                type: [Array],
+                observer(checkList){
+                    let {value} = this.data;
+                    checkList.map((item)=>{
+                        if(value.contains(item.value)){
+                            item.checked=true;
+                        }else {
+                            item.checked=false;
+                        }
+                    });
+                    this.setData({checkList:checkList})
+                }
+            }
+        },
+        data: {
+
+        },
+        methods: {
+            onChange(e){
+                let {checkList,value} = this.data,
+                    index = e.currentTarget.dataset.index,
+                    item = checkList[index];
+                if(item.disabled) return false;
+                if(value.contains(item.value)){
+                    value = this._delete(value,item.value)
+                }else {
+                    value.push(item.value)
+                }
+                checkList.map((item)=>{
+                    if(value.contains(item.value)){
+                        item.checked=true;
+                    }else {
+                        item.checked=false;
+                    }
+                });
+                this.setData({checkList:checkList});
+                this.triggerEvent('onChange',{value:value})
+            },
+            _delete(p=[],value){
+               let dex=null;
+               p.length&&p.map((item,index)=>{
+                   if(item===value){
+                       dex =index
+                   }
+               });
+                p.splice(dex,1);
+                return p;
+            }
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    @import "../theme";
+    .checkbox{
+        width: 100%;
+        background-color:white;
+        border-bottom: 2rpx solid rgba(0, 0, 0, 0.07);
+        border-top: 2rpx solid rgba(0, 0, 0, 0.07);
+        padding: 0 20rpx;
+        box-sizing: border-box;
+        .checkItem{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            line-height: 72rpx;
+            font-size: 32rpx;
+            color: #666666;
+            border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
+            &:last-child{
+                border-bottom:none;
+            }
+            .checkBox{
+                width: 28rpx;
+                height: 28rpx;
+                border-radius: 50%;
+                border:4rpx solid rgba(0, 0, 0, 0.18);
+                margin-right: 20rpx;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 13rpx;
+                    height: 13rpx;
+                    background-color:rgba(0, 0, 0, 0.18);
+                    border-radius: 50%;
+                    top: 8rpx;
+                    left: 8rpx;
+                }
+            }
+            .active{
+                &::after{
+                    width: 17rpx;
+                    height: 17rpx;
+                    background-color:@radio_active;
+                    border-radius: 50%;
+                    top: 7rpx;
+                    left: 7rpx;
+                    transition: .2s ease;
+                }
+            }
+        }
+        .disabled{
+            color: #eeeeee;
+            .checkBox{
+                border-color:#eeeeee;
+                &::after{
+                    background-color:#eeeeee;
+                }
+            }
+            .active{
+                &::after{
+                    width: 17rpx;
+                    height: 17rpx;
+                    background-color:@radio_active_disabled;
+                    border-radius: 50%;
+                    top: 7rpx;
+                    left: 7rpx;
+                    transition: .2s ease;
+                }
+            }
+        }
+    }
+</style>
