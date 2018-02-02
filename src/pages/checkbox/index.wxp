@@ -4,6 +4,8 @@
     <wxc-example title="checkbox value={{value}} disabled" class="example">
       <wxc-check
           checkList="{{radioList}}"
+          for_key="d"
+          for_value="f"
           bindonChange="onChange"
           value="{{['1','2']}}"
       >
@@ -25,15 +27,21 @@ export default {
 
     data:{
         radioList:[{
-            name:'checkbox1',
-            value:'1'
+            d:'checkbox1',
+            f:'1'
         },{
-            name:'checkbox2',
-            value:'2',
+            d:'checkbox2',
+            f:'2',
             disabled:true
         },{
-            name:'checkbox3',
-            value:'3'
+            d:'checkbox3',
+            f:'3'
+        },{
+            d:'checkbox4',
+            f:'4'
+        },{
+            d:'checkbox5',
+            f:'5'
         }]
 
     },

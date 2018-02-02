@@ -24,6 +24,14 @@
 
         },
         properties: {
+            for_key: {
+                type: [String],
+                value: ''
+            },
+            for_value: {
+                type: [String],
+                value: ''
+            },
             value: {
                 type: [Array],
                 value: ''
@@ -31,8 +39,10 @@
             checkList: {
                 type: [Array],
                 observer(checkList){
-                    let {value} = this.data;
-                    checkList.map((item)=>{
+                    let {value,for_key,for_value} = this.data;
+                    checkList.length&&checkList.map((item)=>{
+                        item.name=item[for_key];
+                        item.value=item[for_value];
                         if(value.contains(item.value)){
                             item.checked=true;
                         }else {

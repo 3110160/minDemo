@@ -4,6 +4,8 @@
     <wxc-example title="radio value={{value}} disabled" class="example">
       <wxc-radio
           radioList="{{radioList}}"
+          for_key="t"
+          for_value="p"
           bindonChange="onChange"
           value="1"
       >
@@ -25,16 +27,23 @@ export default {
 
     data:{
         radioList:[{
-            name:'radio1',
-            value:'1'
+            t:'radio1',
+            p:'1'
         },{
-            name:'radio2',
-            value:'2',
+            t:'radio2',
+            p:'2',
             disabled:true
         },{
-            name:'radio3',
-            value:'3'
-        }]
+            t:'radio3',
+            p:'3'
+        },{
+            t:'radio4',
+            p:'5'
+        },{
+            t:'radio5',
+            p:'4'
+        }
+        ]
 
     },
     onChange(e){

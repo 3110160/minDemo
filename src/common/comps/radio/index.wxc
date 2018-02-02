@@ -15,12 +15,28 @@
 
         },
         properties: {
+            for_key: {
+                type: [String],
+                value: ''
+            },
+            for_value: {
+                type: [String],
+                value: ''
+            },
             value: {
                 type: [String],
                 value: ''
             },
             radioList: {
-                type: [Array]
+                type: [Array],
+                observer(radioList){
+                    let {for_key,for_value} = this.data;
+                    radioList.length&&radioList.map((item)=>{
+                        item.name=item[for_key];
+                        item.value=item[for_value];
+                    });
+                    this.setData({radioList:radioList})
+                }
             }
         },
         data: {
