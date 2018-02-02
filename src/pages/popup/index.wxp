@@ -6,9 +6,11 @@
         </wxc-example>
 
         <wxc-popup
+                width="100%"
+                height="100rpx"
                 class="popup1"
         >
-            <view style="height: 100rpx" class="topPopup">
+            <view class="topPopup">
                 我是顶部出来的
             </view>
         </wxc-popup>
@@ -18,6 +20,8 @@
             <wxc-popup
                     class="popup2"
                     contAlign="left"
+                    height="100%"
+                    width="200rpx"
             >
                 <view class="leftPop">
                     我是从左边出来的
@@ -30,8 +34,10 @@
             <wxc-popup
                     class="popup3"
                     contAlign="bottom"
+                    width="100%"
+                    height="100rpx"
             >
-                <view style="height: 100rpx" class="topPopup">
+                <view class="topPopup">
                     我是底部出来的
                 </view>
             </wxc-popup>
@@ -40,6 +46,8 @@
         <wxc-example title="popup" class="example">
             <wxc-button size="small" type="warn" text="从右面展示" data-popup="popup4" bindmytap="showDialog"></wxc-button>
             <wxc-popup
+                    height="100%"
+                    width="200rpx"
                     class="popup4"
                     contAlign="right"
             >
@@ -55,8 +63,10 @@
             <wxc-popup
                     class="popup5"
                     contAlign="center"
+                    height="40%"
+                    width="40%"
             >
-                <view style="width: 300rpx;height: 200rpx" class="center">
+                <view class="center">
                     我是从中间边出来的
                 </view>
             </wxc-popup>
@@ -124,20 +134,20 @@
 
         }
         .topPopup {
-            height: 100 rpx;
             width: 100%;
+            height: 100%;
             text-align: center;
             line-height: 72 rpx;
             background-color: white;
         }
         .leftPop {
-            width: 200 rpx;
+            width: 100%;
             height: 100%;
             background-color: white;
         }
         .center {
-            width: 300 rpx;
-            height: 200 rpx;
+            width: 100%;
+            height: 100%;
             text-align: center;
             background-color: white;
         }

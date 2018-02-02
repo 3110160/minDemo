@@ -9,7 +9,7 @@
       ></wxc-toptips>
     </wxc-example>
 
-    <wxc-example title="tips 默认 2s后消失 (用于表单验证)" class="example">
+    <wxc-example title="tips 带icon 2s后消失 (用于表单验证)" class="example">
       <wxc-button size="small" type="warn" text="show" data-toast="tips1" bindmytap="showTips"></wxc-button>
       <wxc-toptips
               class="tips1"

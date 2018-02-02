@@ -87,7 +87,7 @@ export default {
     },
     showDialog(e){
         let dialogIndex = e.target.dataset.dialog;
-        let dialogCom = this.selectComponent(`.${dialogIndex}`)
+        let dialogCom = this.selectComponent(`.${dialogIndex}`);
         dialogCom&&dialogCom.show();
     },
 

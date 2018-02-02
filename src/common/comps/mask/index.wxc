@@ -1,6 +1,6 @@
 <template>
     <view class="mask {{maskStatus}}">
-        <view class="maskBg" style="background: rgba({{backgroundColor}},{{opacity}});" bindtap="omMaskTap"></view>
+        <view class="maskBg" style="background: rgba({{backgroundColor}},{{opacity}});" bindtap="maskTap"></view>
         <view class="maskContent" style="{{__positionStyle}}">
             <slot></slot>
         </view>
@@ -49,8 +49,8 @@
                 value: '#000000'
             },
             locked: {
-                type: [String],
-                value: 'hide'
+                type: Boolean,
+                value: false
             },
             contentAlign: {
                 type: String,
@@ -75,16 +75,13 @@
                     maskStatus: 'hide'
                 });
             },
-            omMaskTap: function (event) {
-                let data = this.data;
-                let detail = event.detail;
-                let option = {t:'点击旁边消失'};
-
-                if (data.locked && data.locked !== 'true') {
+            maskTap() {
+                let {locked} = this.data;
+                if (!locked) {
                     this.setData({
                         maskStatus: 'hide'
                     });
-                    this.triggerEvent('masktap', detail,option);
+                    this.triggerEvent('masktap');
                 }
             }
         },

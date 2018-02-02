@@ -1,13 +1,14 @@
 <template>
     <wxc-mask
         maskStatus="{{maskStatus}}"
-        locked="{{locked}}"
+        locked="{{_locked}}"
     ></wxc-mask>
     <view
-            class="popup popup_{{contAlign}} popup_{{animationMode+'_'+contAlign}}"
-            bindtap="hide"
-            >
-        <slot></slot>
+        class="popup popup_{{contAlign}} popup_{{animationMode+'_'+contAlign}}"
+        bindtap="popupHide">
+        <view catchtap="contentHide" style="width:{{width}};height:{{height}}">
+            <slot></slot>
+        </view>
     </view>
 </template>
 
@@ -19,13 +20,25 @@
             }
         },
         properties: {
-            locked: {
-                type: String,
-                value: 'true'
+            _locked: {
+                type: Boolean,
+                value: false
+            },
+            lockPopup: {
+                type: Boolean,
+                value: false
             },
             contAlign:{
                 type: String,
                 value: 'top' //left || right || bottom || center
+            },
+            width:{
+                type: String,
+                value: 'auto'
+            },
+            height:{
+                type: String,
+                value: 'auto'
             }
         },
         data: {
@@ -33,6 +46,15 @@
             animationMode:'no'
         },
         methods:{
+            contentHide(){
+
+            },
+            popupHide(){
+                let {lockPopup} = this.data;
+                if(!lockPopup){
+                    this.hide();
+                }
+             },
             //todo 隐藏
             hide(){
                 this.setData({

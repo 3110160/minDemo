@@ -1,5 +1,5 @@
 <template>
-    <wxc-popup contAlign="center" locked="true" class="popup">
+    <wxc-popup contAlign="center" locked={{true}} class="popup">
         <view class="dialog">
             <view class="dialogTitle" wx:if="{{title}}" style="color: {{titleColor}}">{{title}}</view>
             <view class="dialogContent" style="padding-top: {{!title?'20rpx':'0'}}">
