@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/button/index",
+    "pages/checkbox/index",
     "pages/color/index",
     "pages/dialog/index",
     "pages/elip/index",
@@ -14,7 +15,7 @@
     "pages/switch/index",
     "pages/tab/index",
     "pages/toast/index",
-    "pages/checkbox/index"
+    "pages/topTips/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
