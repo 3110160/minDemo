@@ -13,7 +13,7 @@
       <wxc-button size="small" type="warn" text="show" data-toast="tips1" bindmytap="showTips"></wxc-button>
       <wxc-toptips
               class="tips1"
-              icon="smile"
+              icon="description"
               text="我是内我是内容我是内"
       ></wxc-toptips>
     </wxc-example>

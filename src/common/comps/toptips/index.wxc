@@ -1,5 +1,5 @@
 <template>
-    <view class="topTips {{show?'tipsBoxShow':'tipsBoxHide'}}" wx:if="{{show}}">
+    <view class="topTips {{_show?'tipsBoxShow':'tipsBoxHide'}}" wx:if="{{show}}">
         <view wx:if="{{icon || iconImage}}" class="tipsIcon">
             <block wx:if="{{icon && !iconImage}}">
                 <wxc-icon icon="{{icon}}" iconStyle="font-size: 36rpx;color: white;{{iconStyle}}"></wxc-icon>
@@ -46,7 +46,7 @@
             }
         },
         data: {
-
+            _show:false
         },
         methods: {
             show(text) {
@@ -54,6 +54,7 @@
                 clearTimeout(this.timer);
                 this.setData({
                     show: true,
+                    _show: true,
                     text: text || this.data.text
                 });
                 if(duration>0&&duration !== Infinity){
@@ -65,8 +66,13 @@
             hide() {
                 this.timer = clearTimeout(this.timer);
                 this.setData({
-                    show: false
+                    _show: false
                 });
+                let timer = setTimeout(()=>{
+                    this.setData({
+                        show: false
+                    },()=>clearTimeout(timer));
+                },200)
             },
         },
         attached(){
@@ -109,13 +115,13 @@
                 height: 40rpx;
             }
         }
-        .tipsBoxShow{
-            animation: show .2s ease;
-        }
-        .tipsBoxHide{
-            animation: hide .2s ease;
-        }
 
+    }
+    .tipsBoxShow{
+        animation: show .2s ease;
+    }
+    .tipsBoxHide{
+        animation: hide .2s ease-in-out;
     }
     @keyframes show
     {
