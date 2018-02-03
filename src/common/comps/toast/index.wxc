@@ -133,19 +133,19 @@
     @keyframes show
     {
         from {
-            opacity: 0;
+            opacity:@toastBox_bg_end;
         }
         to {
-            opacity: .7;
+            opacity:@toastBox_bg;
         }
     }
     @keyframes hide
     {
         from {
-            opacity: .7;
+            background-color:@toastBox_bg;
         }
         to {
-            opacity: 0;
+            background-color:@toastBox_bg_end;
         }
     }
 </style>
