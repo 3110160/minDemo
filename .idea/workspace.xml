@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c8061682-4f16-4e4e-a63b-48e333cd7262" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/checkbox/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/checkbox/index.wxc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/radio/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/radio/index.wxc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/theme.less" afterPath="$PROJECT_DIR$/src/common/comps/theme.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/comps/toast/index.wxc" afterPath="$PROJECT_DIR$/src/common/comps/toast/index.wxc" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,26 +19,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/toptips/index.wxc">
+      <file leaf-file-name="index.wxp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/radio/index.wxp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1054">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#text#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="337">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.wxc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/common/comps/toast/index.wxc">
+        <entry file="file://$PROJECT_DIR$/src/common/comps/radio/index.wxc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="146" column="12" lean-forward="true" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="305">
+              <caret line="106" column="29" lean-forward="false" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/comps/checkbox/index.wxc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="175" column="5" lean-forward="true" selection-start-line="168" selection-start-column="4" selection-end-line="175" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/comps/loadmore/index.wxc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="91" column="14" lean-forward="true" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,8 +62,8 @@
       <file leaf-file-name="theme.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/comps/theme.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="265">
+              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -73,7 +90,6 @@
       <find>block</find>
       <find>for-item</find>
       <find>radioBox</find>
-      <find>radioItem</find>
       <find>tipsIcon</find>
       <find>locked</find>
       <find>toastTitle</find>
@@ -86,6 +102,7 @@
       <find>tipsBoxShow</find>
       <find>home</find>
       <find>radioList</find>
+      <find>radioItem</find>
     </findStrings>
     <replaceStrings>
       <replace>maskStatus</replace>
@@ -122,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/pages/home/menu.js" />
         <option value="$PROJECT_DIR$/src/pages/icon/index.wxp" />
         <option value="$PROJECT_DIR$/src/pages/home/index.wxp" />
-        <option value="$PROJECT_DIR$/dist/app.json" />
         <option value="$PROJECT_DIR$/src/pages/button/index.wxp" />
         <option value="$PROJECT_DIR$/src/app.wxa" />
         <option value="$PROJECT_DIR$/src/pages/loading/index.wxp" />
@@ -140,17 +156,18 @@
         <option value="$PROJECT_DIR$/src/pages/dialog/index.wxp" />
         <option value="$PROJECT_DIR$/src/common/comps/popup/index.wxc" />
         <option value="$PROJECT_DIR$/src/pages/popup/index.wxp" />
-        <option value="$PROJECT_DIR$/src/common/comps/radio/index.wxc" />
         <option value="$PROJECT_DIR$/src/pages/radio/index.wxp" />
         <option value="$PROJECT_DIR$/src/common/comps/checkbox/README.md" />
         <option value="$PROJECT_DIR$/src/common/comps/radio/README.md" />
         <option value="$PROJECT_DIR$/src/pages/checkbox/index.wxp" />
-        <option value="$PROJECT_DIR$/src/common/comps/checkbox/index.wxc" />
         <option value="$PROJECT_DIR$/src/pages/icon/config.js" />
         <option value="$PROJECT_DIR$/src/pages/topTips/index.wxp" />
         <option value="$PROJECT_DIR$/src/common/comps/toptips/index.wxc" />
-        <option value="$PROJECT_DIR$/src/common/comps/theme.less" />
         <option value="$PROJECT_DIR$/src/common/comps/toast/index.wxc" />
+        <option value="$PROJECT_DIR$/dist/app.json" />
+        <option value="$PROJECT_DIR$/src/common/comps/theme.less" />
+        <option value="$PROJECT_DIR$/src/common/comps/checkbox/index.wxc" />
+        <option value="$PROJECT_DIR$/src/common/comps/radio/index.wxc" />
       </list>
     </option>
   </component>
@@ -277,7 +294,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="comps" type="462c0819:PsiDirectoryNode" />
-              <item name="toast" type="462c0819:PsiDirectoryNode" />
+              <item name="checkbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -285,13 +302,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="comps" type="462c0819:PsiDirectoryNode" />
-              <item name="toptips" type="462c0819:PsiDirectoryNode" />
+              <item name="loadmore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="minDemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="comps" type="462c0819:PsiDirectoryNode" />
+              <item name="radio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="minDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="minDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,7 +411,7 @@
       <workItem from="1517383219587" duration="2896000" />
       <workItem from="1517454147809" duration="5857000" />
       <workItem from="1517538380303" duration="4823000" />
-      <workItem from="1517545875843" duration="8166000" />
+      <workItem from="1517545875843" duration="9500000" />
     </task>
     <task id="LOCAL-00001" summary="fdd">
       <created>1515501598136</created>
@@ -521,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517588081798</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="优化 topTips">
+      <created>1517651234577</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1517651234577</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217019000" />
+    <option name="totallyTimeSpent" value="218353000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,9 +618,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/app.json" />
-    <entry file="file://$PROJECT_DIR$/dist/pages/foot/index.wxml" />
-    <entry file="file://$PROJECT_DIR$/dist/app.js" />
     <entry file="file://$PROJECT_DIR$/dist/pages/button/index.wxss" />
     <entry file="file://$PROJECT_DIR$/dist/pages/button/index.wxml" />
     <entry file="file://$PROJECT_DIR$/dist/pages/index/index.wxml" />
@@ -783,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/radio/index.wxp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/checkbox/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -851,17 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#5977#12650#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/checkbox/index.wxc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -874,39 +884,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/radio/index.wxc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/toptips/index.wxc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1054">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#text#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/comps/theme.less">
+    <entry file="file://$PROJECT_DIR$/dist/packages/es6-promise/dist/es6-promise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comps/toast/index.wxc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="146" column="12" lean-forward="true" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
+        <state relative-caret-position="372">
+          <caret line="140" column="5" lean-forward="false" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/theme.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/radio/index.wxp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/loadmore/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="91" column="14" lean-forward="true" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/checkbox/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="175" column="5" lean-forward="true" selection-start-line="168" selection-start-column="4" selection-end-line="175" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/comps/radio/index.wxc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="106" column="29" lean-forward="false" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
