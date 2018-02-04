@@ -1,0 +1,136 @@
+<template>
+    <view class="picker" bindtap="showPicker">
+        <slot></slot>
+    </view>
+    <wxc-popup
+        class="popup"
+        width="100%"
+        height="50%"
+        contAlign="bottom"
+    >
+        <view class="content">
+            <view class="top" style="height:15%">
+                <view class="cancel" bindtap="cancel">取消</view>
+                <view class="confirm" bindtap="confirm">确认</view>
+            </view>
+            <scroll-view class="selectedData" scroll-x style="height:15%">{{selectedData}}</scroll-view>
+            <scroll-view class="scrollCont" scroll-y style="height:70%">
+                <wxc-radio
+                        class="radio"
+                        wx:if="{{!multi}}"
+                        radioList="{{list}}"
+                        for_key="{{for_key}}"
+                        for_value="{{for_value}}"
+                        bindonChange="onChange"
+                ></wxc-radio>
+                <wxc-checkbox
+                        class="checkbox"
+                        wx:if="{{multi}}"
+                        checkList="{{list}}"
+                        for_key="{{for_key}}"
+                        for_value="{{for_value}}"
+                        bindonChange="onChange"
+                ></wxc-checkbox>
+            </scroll-view>
+        </view>
+    </wxc-popup>
+</template>
+
+<script>
+    export default {
+        config: {
+            usingComponents: {
+                'wxc-popup':'common/comps/popup',
+                'wxc-checkbox':'common/comps/checkbox',
+                'wxc-radio':'common/comps/radio'
+            }
+        },
+        properties: {
+            multi: {
+                type: Boolean,
+                value: false
+            },
+            list: {
+                type: Array,
+                value: []
+            },
+            for_key: {
+                type: [String],
+                value: 't'
+            },
+            for_value: {
+                type: [String],
+                value: 'p'
+            },
+            list:{
+                type:Array,
+                value:[]
+            }
+        },
+        data: {
+            list:[],
+            selectedData:''
+        },
+        methods: {
+            onChange(e){
+                this.setData({
+                    selectedData:typeof e.detail.names == 'array'?e.detail.names.join('、'):e.detail.names,
+                    detail:e.detail
+                })
+            },
+            cancel(){
+                this.selectComponent('.popup').hide();
+            },
+            showPicker(){
+
+                this.selectComponent('.popup').show();
+            },
+            confirm(){
+                let {detail} = this.data;
+                this.triggerEvent('confirm',detail);
+                this.selectComponent('.popup').hide();
+            }
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .picker{
+        width: 100%;
+    }
+.content{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20rpx 30rpx;
+        box-sizing: border-box;
+        .confirm{
+            color: #008009;
+        }
+        .cancel{
+            color:#999999;
+        }
+    }
+    .selectedData{
+        padding:0 20rpx;
+        box-sizing: border-box;
+        text-align: center;
+        color: #333333;
+        font-size: 32rpx;
+        white-space:nowrap;
+    }
+    .scrollCont{
+        padding: 10rpx 20rpx 40rpx 20rpx;
+        box-sizing: border-box;
+    }
+}
+</style>

@@ -34,7 +34,7 @@
             },
             value: {
                 type: [Array],
-                value: ''
+                value: []
             },
             checkList: {
                 type: [Array],
@@ -43,7 +43,7 @@
                     checkList.length&&checkList.map((item)=>{
                         item.name=item[for_key];
                         item.value=item[for_value];
-                        if(value.contains(item.value)){
+                        if(value.length&&value.contains(item.value)){
                             item.checked=true;
                         }else {
                             item.checked=false;
@@ -54,19 +54,28 @@
             }
         },
         data: {
-
+            names:[]
         },
         methods: {
             onChange(e){
-                let {checkList,value} = this.data,
+                let {checkList,value,names} = this.data,
                     index = e.currentTarget.dataset.index,
                     item = checkList[index];
                 if(item.disabled) return false;
+                /*获取value*/
                 if(value.contains(item.value)){
                     value = this._delete(value,item.value)
                 }else {
                     value.push(item.value)
                 }
+
+                /*获取key*/
+                if(names.contains(item.name)){
+                    names = this._delete(names,item.name)
+                }else {
+                    names.push(item.name)
+                }
+
                 checkList.map((item)=>{
                     if(value.contains(item.value)){
                         item.checked=true;
@@ -75,7 +84,7 @@
                     }
                 });
                 this.setData({checkList:checkList});
-                this.triggerEvent('onChange',{value:value})
+                this.triggerEvent('onChange',{value:value,names:names})
             },
             _delete(p=[],value){
                let dex=null;
@@ -100,8 +109,6 @@
     .checkbox{
         width: 100%;
         background-color:white;
-        border-bottom: 2rpx solid rgba(0, 0, 0, 0.07);
-        border-top: 2rpx solid rgba(0, 0, 0, 0.07);
         padding: 0 20rpx;
         box-sizing: border-box;
         .checkItem{

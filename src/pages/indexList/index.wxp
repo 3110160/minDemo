@@ -1,0 +1,70 @@
+<template>
+  <view class="container">
+
+    <wxc-example title="elip 截断 默认" class="example">
+      <wxc-indexlist
+        class="indexlist"
+      >
+      </wxc-indexlist>
+    </wxc-example>
+
+  </view>
+</template>
+
+<script>
+  const app = getApp();
+export default {
+    config: {
+        usingComponents: {
+            'wxc-example':'common/comps/example',
+            'wxc-indexlist':'common/comps/indexList'
+        }
+    },
+
+    data:{
+
+    },
+    //生命周期函数--监听页面加载
+    onLoad () {
+    },
+    //生命周期函数--监听页面初次渲染完成
+    onReady(){
+
+    },
+    //生命周期函数--监听页面显示
+    onShow () {
+    },
+    //生命周期函数--监听页面隐藏
+    onHide(){
+
+    }
+}
+</script>
+
+<style lang="less">
+  .flex_row(){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex_column(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 100%;
+    .flex_column;
+    justify-content: flex-start;
+    .example{
+      width: 100%;
+      .indexlist{
+        height: 300rpx;
+        width: 100%;
+      }
+    }
+
+  }
+</style>

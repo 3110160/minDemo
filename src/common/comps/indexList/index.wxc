@@ -1,0 +1,66 @@
+<template>
+    <scroll-view class="indexList" style="height: 600rpx" scroll-y  bindscroll="scroll" scroll-into-view="{{toView}}">
+        <view id="green" class="scroll-view-item bc_green"></view>
+        <view id="red"  class="scroll-view-item bc_red"></view>
+        <view id="yellow" class="scroll-view-item bc_yellow"></view>
+        <view id="blue" class="scroll-view-item bc_blue">blue6</view>
+        <view id="red1"  class="scroll-view-item bc_red"></view>
+        <view id="yellow2" class="scroll-view-item bc_yellow"></view>
+        <view id="blue3" class="scroll-view-item bc_blue"></view>
+        <view id="red4"  class="scroll-view-item bc_red"></view>
+        <view id="yellow5" class="scroll-view-item bc_yellow"></view>
+        <view id="blue6" class="scroll-view-item bc_blue"></view>
+        <view id="red7"  class="scroll-view-item bc_red"></view>
+        <view id="yellow8" class="scroll-view-item bc_yellow"></view>
+        <view id="blue9" class="scroll-view-item bc_blue"></view>
+    </scroll-view>
+</template>
+
+<script>
+    export default {
+        config: {
+
+        },
+        properties: {
+            line: {
+                type: Number,
+                value: 1
+            },
+        },
+        data: {
+            toView:'blue'
+        },
+        methods: {
+            scroll(e){
+                console.log(e);
+            }
+        },
+        attached(){
+
+        }
+
+    }
+</script>
+
+<style lang="less">
+    .indexList{
+        height: 100%;
+        width: 100%;
+        .scroll-view-item{
+            height: 100rpx;
+            width: 100%;
+        }
+        .bc_green{
+            background-color: green;
+        }
+        .bc_yellow{
+            background-color: yellow;
+        }
+        .bc_red{
+            background-color: red;
+        }
+        .bc_blue{
+            background-color:blue;
+        }
+    }
+</style>

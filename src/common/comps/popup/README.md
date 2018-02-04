@@ -11,7 +11,7 @@
 |----------------------|------------------------------|
 |`locked`              | 点击mask是否可以关闭 [String] （true）   |
 |`lockPopup`           | 点击Popup是否可以关闭 [String] （true）   |
-|`contentAlign`        | 内容布局 [String] （top）[top left right bottom center] |
+|`contAlign`        | 内容布局 [String] （top）[top left right bottom center] |
 
 methods (show,hide)
 
