@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/button/index",
     "pages/checkbox/index",
     "pages/color/index",
@@ -7,7 +8,6 @@
     "pages/elip/index",
     "pages/foot/index",
     "pages/icon/index",
-    "pages/index/index",
     "pages/indexList/index",
     "pages/loading/index",
     "pages/loadMore/index",
